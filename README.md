@@ -7,7 +7,7 @@ This repository is my personal dotfiles. Dotfiles are the files responsible for 
 <img align="left" border="0" padding="4" src="https://gitlab.com/Zaney/dotfiles/-/raw/master/pictureofme.JPG">
 I am Tyler Kelley, a humble content creator. You can find me over at YouTube (https://www.youtube.com/c/ZaneyOG) as well as over on LBRY (https://lbry.tv/@OfficialZaney:8). My content focuses on Linux, window managers, and gaming. My content is heavily inspired by DT (DistroTube: https://www.youtube.com/c/DistroTube) and TLG (The Linux Gamer: https://www.youtube.com/channel/UCv1Kcz-CuGM6mxzL3B1_Eiw). Definitely give their content a look if your new to Linux!
 
-My goal is to demonstrate just how far gaming in Linux has come. Hopefully I can also show that having a very customized window manager and Linux install isn't as hard as people make it out to be. 
+My goal is to demonstrate just how far gaming in Linux has come. Hopefully I can also show that having a very customized window manager and Linux install isn't as hard as people make it out to be. As I learn more about Linux and do more with my install. I will share almost everything I learn with all of you!
 
 # My Social Links
 Mastodon - https://social.linux.pizza/@Zaney
