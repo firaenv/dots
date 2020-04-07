@@ -1,9 +1,10 @@
-#  ____ _____ 
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/ 
-# |____/ |_|  	
-
+#  _______ __
+# |_   _| | /  Tyler Kelley (Zaney)
+#   | | |  /   http://www.youtube.com/c/ZaneyOG
+#   | | | | \  https://discord.gg/2cRdBs8
+#   |_| |_|\_\
+#
+# An edited Polybar config based off DistroTubes polybar config.
 ;=====================================================
 ;
 ; To learn more about how to configure Polybar
