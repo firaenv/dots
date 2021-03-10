@@ -11,10 +11,7 @@ I am Tyler Kelley, a humble content creator. You can find me over at YouTube (ht
 Mastodon - https://social.linux.pizza/@Zaney
 Discord - https://discord.gg/2cRdBs8
 
-# Why Do I Use Discord?
-I know, I know.. Discord is what most would call "proprietary garbage." However, in my opinion it truly isn't. Windows is proprietary garbage, the software sucks arse and they want to bleed your wallet dry just for the pleasure of allowing them to spy on you. Discord on the other hand is a reliable, good looking, easy-to-use, and has wide-spread adoption. Also when it comes to chat clients like Discord I already through privacy out the window. I expect a certain level of privacy, but I know should someone with enough authority wanted to see my chat history - it could happen. 
 
-So, TL;DR I like Discord and all my friends do too. So that's what I use - that simple. lol
 
 # License
 The files and scripts in this repository are licensed under the MIT License, which is a very permissive license allowing you to use, modify, copy, distribute, sell, give away, etc. the software.  In other words, do what you want with it.  The  only requirement with the MIT License is that the license and copyright notice must be provided with the software.
