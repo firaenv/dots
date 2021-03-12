@@ -23,7 +23,6 @@
 [[ $- != *i* ]] && return
 
 stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term)
-shopt -s autocd # Allows you to cd into directories by typing the name only
 
 # Archive Extraction
 # Usage: ex <file>
@@ -76,7 +75,8 @@ alias sr='sudo ranger'
 alias grep='grep --color=auto'
 
 
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
 
-clear
 figlet -c -t "Welcome Back Sir." | lolcat
+
+eval "$(starship init bash)"
