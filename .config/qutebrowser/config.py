@@ -32,7 +32,7 @@
 c.aliases = {'q': 'quit', 'w': 'session-save', 'wq': 'quit --save'}
 
 # Setting dark mode
-config.set("colors.webpage.darkmode.enabled", True)
+# config.set("colors.webpage.darkmode.enabled", True)
 
 # Get Rid of Auto Load Dialogue
 config.load_autoconfig(False)
@@ -276,7 +276,7 @@ c.colors.completion.scrollbar.fg = 'white'
 
 # Background color for the download bar.
 # Type: QssColor
-c.colors.downloads.bar.bg = '#9ea7a6'
+c.colors.downloads.bar.bg = '#232c31'
 
 # Background color for downloads with errors.
 # Type: QtColor
