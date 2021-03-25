@@ -12,5 +12,5 @@ while true; do
          CPU=$(top -bn1 | grep Cpu | awk '{print $2}')%
          xsetroot -name "| VOL:$VOL | CPU:$CPU | MEM:$MEM | FREE DISK: $DISKFREE | BAT:$CHARGE :: $STATUS $LOCALTIME"
 
-          sleep 4s
+         sleep 4s
 done &
