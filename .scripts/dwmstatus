@@ -5,7 +5,7 @@ while true; do
          LOCALTIME=$(date '+| %A :: %B %d :: %R |')
          VOL=$(pamixer --get-volume)%
          DISKFREE=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $4'})
-         DISKUSED=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $3'})
+         #DISKUSED=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $3'})
          MEM=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
          CHARGE=$(cat /sys/class/power_supply/BAT1/capacity)%
          STATUS=$(cat /sys/class/power_supply/BAT1/status)
