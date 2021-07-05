@@ -95,10 +95,10 @@ keys = [
 ]
 
 
-group_names = [("WEB", {'layout': 'monadtall'}),
+group_names = [("WRK", {'layout': 'monadtall'}),
+               ("WEB", {'layout': 'monadtall'}),
                ("STM", {'layout': 'monadtall'}),
-               ("SYS", {'layout': 'monadtall'}),
-               ("VBOX", {'layout': 'monadtall'}),
+               ("ITCH", {'layout': 'monadtall'}),
                ("CHAT", {'layout': 'monadtall'}),
                ("MUS", {'layout': 'monadtall'}),
                ("VID", {'layout': 'monadtall'})]
