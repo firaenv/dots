@@ -74,12 +74,13 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 
     # My Application Shortcuts
-    Key([mod], "w", lazy.spawn("qutebrowser"), desc="Launch Web Browser"),
+    Key([mod], "w", lazy.spawn("firefox"), desc="Launch Web Browser"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
     Key([mod], "o", lazy.spawn("obs"), desc="Launch OBS Studio"),
     Key([mod], "g", lazy.spawn("gimp"), desc="Launch GNU Image Manipulation Program"),
     Key([mod], "v", lazy.spawn("vlc"), desc="Launch VLC Media Player"),
     Key([mod, "shift"], "o", lazy.spawn("olive-editor"), desc="Launch Olive Video Editor"),
+    Key([mod], "f", lazy.spawn("pcmanfm"), desc="Launch File Browser"),
 
     ### Switch focus of monitors
     Key([mod], "period",
@@ -95,7 +96,7 @@ keys = [
 
 
 group_names = [("WEB", {'layout': 'monadtall'}),
-               ("STM", {'layout': 'floating'}),
+               ("STM", {'layout': 'monadtall'}),
                ("SYS", {'layout': 'monadtall'}),
                ("VBOX", {'layout': 'monadtall'}),
                ("CHAT", {'layout': 'monadtall'}),
@@ -110,8 +111,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 4,
-                "border_focus": "484d79",
-                "border_normal": "3f4944"
+                "border_focus": "5294e2",
+                "border_normal": "7c818c"
                 }
 
 layouts = [
@@ -135,7 +136,7 @@ widget_defaults = dict(
     font='Ubuntu R',
     fontsize=12,
     padding=2,
-    background="#232c31",
+    background="#2f343f",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -146,48 +147,62 @@ screens = [
                 widget.GroupBox(
                     font="Ubuntu Bold",
                     fontsize=10,
-                    margin_y=3,
+                    margin_y=4,
                     margin_x=1,
-                    padding_y=5,
-                    padding_x=1,
+                    padding_y=2,
+                    padding_x=4,
                     borderwidth=3,
-                    active="#b5d8f6",
-                    inactive="#9ea7a6",
+                    active="#eff1f5",
+                    inactive="#65737e",
                     rounded=False,
-                    highlight_color="#484d79",
+                    highlight_color="#5294e2",
                     highlight_method="line",
                     ),
-                widget.Prompt(),
+                widget.Prompt(
+		    background="#5294e2",
+		    font="Ubuntu Bold",
+		    foreground="#eff1f5",
+		    prompt="Run: ",
+		    padding=10,
+		    ),
                 widget.Spacer(length=bar.STRETCH),
-                widget.Clock(format='%a %I:%M %p'),
+                widget.Clock(
+		    format='%a %I:%M %p',
+		    font="Ubuntu Bold",
+		    padding=5,
+		    ),
                 widget.Systray(),
             ],
             24,
-            opacity=0.8,
+            opacity=0.9,
         ),
     ),
     Screen(
         top=bar.Bar(
             [
                 widget.GroupBox(
-					font="Ubuntu Bold",
+		    font="Ubuntu Bold",
                     fontsize=10,
                     margin_y=3,
                     margin_x=1,
                     padding_y=5,
                     padding_x=1,
                     borderwidth=3,
-                    active="#b5d8f6",
-                    inactive="#9ea7a6",
+                    active="#eff1f5",
+                    inactive="#65737e",
                     rounded=False,
-                    highlight_color="#484d79",
+                    highlight_color="#5294e2",
                     highlight_method="line",
-					),
+		),
                 widget.Spacer(length=bar.STRETCH),
-                widget.Clock(format='%a %I:%M %p'),
+                widget.Clock(
+		    font="Ubuntu Bold",
+		    padding=5,
+		    format='%a %I:%M %p',
+		    ),
             ],
             28,
-            opacity=0.8,
+            opacity=0.9,
         ),
     )
 ]
