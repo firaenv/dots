@@ -73,16 +73,3 @@ alias sr='sudo ranger'
 
 # Add Color
 alias grep='grep --color=auto'
-
-#PS1='[\u@\h \W]\$ '
-_GREEN=$(tput setaf 2)
-_BLUE=$(tput setaf 4)
-_MAG=$(tput setaf 5)
-_RESET=$(tput sgr0)
-_BOLD=$(tput bold)
-
-PS1='${_BLUE}\u${_GREEN}@${_MAG}\h${_RESET} ${BOLD}\W ${BOLD}\$ ${_RESET}'
-
-figlet -c -t "Welcome Back Sir." | lolcat
-
-eval "$(starship init bash)"
