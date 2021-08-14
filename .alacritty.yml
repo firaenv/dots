@@ -124,50 +124,50 @@ scrolling:
 
 font:
   normal:
-    family: Ubuntu Mono
+    family: DaddyTimeMono Nerd Font Mono
     style: Regular
 
   bold:
-    family: Ubuntu Mono
+    family: DaddyTimeMono Nerd Font Mono
     style: Bold
 
   italic:
-    family: Ubuntu Mono
+    family: DaddyTimeMono Nerd Font Mono
     style: Italic
 
   bold_italic:
-    family: Ubuntu Mono
+    family: DaddyTimeMono Nerd Font Mono
     style: Bold Italic
 
-  size: 12
+  size: 14
 
 colors:
   # Default colors
   primary:
-    background: '0x2b303b'
-    foreground: '0xc0c5ce'
+    background: '0x333333'
+    foreground: '0xcccccc'
 
   # Normal colors
   normal:
-    black:   '0x2b303b'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xc0c5ce'
+    black:   '0x666666'
+    red:     '0xcc6699'
+    green:   '0x99cc66'
+    yellow:  '0xcc9966'
+    blue:    '0x6699cc'
+    magenta: '0x9966cc'
+    cyan:    '0x66cc99'
+    white:   '0xcccccc'
 
   # Bright colors
   bright:
-    black:   '0x65737e'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xeff1f5'
+    black:   '0x999999'
+    red:     '0xff99cc'
+    green:   '0xccff99'
+    yellow:  '0xffcc99'
+    blue:    '0x99ccff'
+    magenta: '0xcc99ff'
+    cyan:    '0x99ffcc'
+    white:   '0xffffff'
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
