@@ -56,20 +56,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias ls='lsd'
-alias p='sudo pacman'
-alias wifispeed='speedometer -r wlp2s0'
-
-# pacman
-alias p='sudo pacman'
-alias pacsyu='sudo pacman -Syyu'
+alias p='doas pacman'
 
 # vim
 alias v='vim'
-alias sv='sudo vim'
-
-# ranger
-alias r='ranger'
-alias sr='sudo ranger'
 
 # Add Color
 alias grep='grep --color=auto'
