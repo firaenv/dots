@@ -6,8 +6,8 @@ static const unsigned int gappx	    = 6;	/* gap between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "DaddyTimeMono Nerd Font Mono:size=14:antialias=true:autohint=true" };
-static const char dmenufont[]       = "DaddyTimeMono Nerd Font Mono:size=14:antialias=true:autohint=true";
+static const char *fonts[]          = { "SpaceMono Nerd Font Mono:size=14:antialias=true:autohint=true" };
+static const char dmenufont[]       = "SpaceMono Nerd Font Mono:size=14:antialias=true:autohint=true";
 static const char col_1[]       = "#102842"; /* bg of bar */
 static const char col_2[]       = "#1e141f"; /* unfocused border */
 static const char col_3[]       = "#cccccc"; /* fg of bar */

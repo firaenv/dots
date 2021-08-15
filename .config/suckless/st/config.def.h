@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DaddyTimeMono Nerd Font Mono:size=18:antialias=true:autohint=true";
+static char *font = "SpaceMono Nerd Font Mono:size=18:antialias=true:autohint=true";
 static int borderpx = 3;
 
 /*
