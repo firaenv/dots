@@ -1,0 +1,2 @@
+#!/bin/sh
+st -e vim $HOME/.scripts/"$(for dir in $HOME/.scripts/*; do [ ! -d "${dir}" ] && echo ${dir#$HOME/.scripts/}; done | dmenu -p "Run: " -fn "DaddyTimeMono Nerd Font Mono:size=14:antialias=true:autohint=true" -nb "#102842" -nf "#cccccc" -sb "#2494f8" -sf "#cccccc")"
