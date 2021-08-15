@@ -23,7 +23,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias ls='lsd'
-alias p='doas pacman'
 
 # vim
 alias v='vim'
