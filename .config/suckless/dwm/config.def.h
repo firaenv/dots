@@ -8,10 +8,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "DaddyTimeMono Nerd Font Mono:size=14:antialias=true:autohint=true" };
 static const char dmenufont[]       = "DaddyTimeMono Nerd Font Mono:size=14:antialias=true:autohint=true";
-static const char col_1[]       = "#333333"; /* bg of bar */
-static const char col_2[]       = "#666666"; /* unfocused border */
+static const char col_1[]       = "#102842"; /* bg of bar */
+static const char col_2[]       = "#1e141f"; /* unfocused border */
 static const char col_3[]       = "#cccccc"; /* fg of bar */
-static const char col_4[]       = "#6699cc"; /* focused border */
+static const char col_4[]       = "#2494f8"; /* focused border */
 static const char *colors[][3]      = {
 	/*               fg     bg      border   */
 	[SchemeNorm] = { col_3, col_1,	col_2 },

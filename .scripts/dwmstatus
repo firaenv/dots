@@ -4,13 +4,13 @@ while true; do
 
          LOCALTIME=$(date '+| %A :: %B %d :: %R |')
          VOL=$(pamixer --get-volume)%
-         DISKFREE=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $4'})
+         #DISKFREE=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $4'})
          #DISKUSED=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $3'})
          MEM=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
-         CHARGE=$(cat /sys/class/power_supply/BAT1/capacity)%
-         STATUS=$(cat /sys/class/power_supply/BAT1/status)
-         CPU=$(top -bn1 | grep Cpu | awk '{print $2}')%
-         xsetroot -name "| VOL:$VOL | CPU:$CPU | MEM:$MEM | FREE DISK: $DISKFREE | BAT:$CHARGE :: $STATUS $LOCALTIME"
+         CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)%
+         STATUS=$(cat /sys/class/power_supply/BAT0/status)
+         #CPU=$(top -bn1 | grep Cpu | awk '{print $2}')%
+         xsetroot -name "| VOL:$VOL | MEM:$MEM | BAT:$CHARGE :: $STATUS $LOCALTIME"
 
          sleep 4s
 done &
