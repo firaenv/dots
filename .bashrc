@@ -38,3 +38,12 @@ alias v='vim'
 
 # Add Color
 alias grep='grep --color=auto'
+
+_GREEN=$(tput setaf 2)
+_BLUE=$(tput setaf 4)
+_RED=$(tput setaf 1)
+_RESET=$(tput sgr0)
+_BOLD=$(tput bold)
+
+PS1="${_GREEN}\h${_BLUE}@${_RED}\u${_RESET} \W ${_BOLD}\$  ${_RESET}"
+

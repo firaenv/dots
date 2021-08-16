@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SpaceMono Nerd Font Mono:size=18:antialias=true:autohint=true";
+static char *font = "SpaceMono Nerd Font Mono:size=14:antialias=true:autohint=true";
 static int borderpx = 3;
 
 /*
@@ -91,10 +91,10 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 5;
 
 /* bg opacity */
-float alpha = 0.85;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -150,7 +150,7 @@ static unsigned int defaultunderline = 7;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
