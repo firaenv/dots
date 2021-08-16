@@ -369,19 +369,19 @@ c.fonts.default_size = '12pt'
 
 # Font used in the completion widget.
 # Type: Font
-c.fonts.completion.entry = '12pt "SpaceMono Nerd Font"'
+c.fonts.completion.entry = '12pt "SpaceMono Nerd Font Mono"'
 
 # Font used for the debugging console.
 # Type: Font
-c.fonts.debug_console = '12pt "SpaceMono Nerd Font"'
+c.fonts.debug_console = '12pt "SpaceMono Nerd Font Mono"'
 
 # Font used for prompts.
 # Type: Font
-c.fonts.prompts = '12pt "SpaceMono Nerd Font"'
+c.fonts.prompts = '12pt "SpaceMono Nerd Font Mono"'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = '12pt "SpaceMono Nerd Font"'
+c.fonts.statusbar = '12pt "SpaceMono Nerd Font Mono"'
 
 # Bindings to use dmenu rather than qutebrowser's builtin search.
 #config.bind('o', 'spawn --userscript dmenu-open')

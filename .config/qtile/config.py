@@ -30,7 +30,7 @@ import socket
 import subprocess
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "st"
 
 keys = [
     # Switch between windows
@@ -74,7 +74,7 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 
     # My Application Shortcuts
-    Key([mod], "w", lazy.spawn("firefox"), desc="Launch Web Browser"),
+    Key([mod], "w", lazy.spawn("qutebrowser"), desc="Launch Web Browser"),
     Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
     Key([mod], "o", lazy.spawn("obs"), desc="Launch OBS Studio"),
     Key([mod], "g", lazy.spawn("gimp"), desc="Launch GNU Image Manipulation Program"),
@@ -111,8 +111,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 2,
                 "margin": 4,
-                "border_focus": "5294e2",
-                "border_normal": "7c818c"
+                "border_focus": "#2494f8",
+                "border_normal": "#1e141f"
                 }
 
 layouts = [
@@ -132,10 +132,10 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Ubuntu R',
-    fontsize=12,
+    font='SpaceMono Nerd Font Mono',
+    fontsize=14,
     padding=2,
-    background="#2f343f",
+    background="#102842",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -144,8 +144,8 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    font="Ubuntu Bold",
-                    fontsize=10,
+                    font="SpaceMono Nerd Font Mono",
+                    fontsize=14,
                     margin_y=4,
                     margin_x=1,
                     padding_y=2,
@@ -176,34 +176,6 @@ screens = [
             opacity=0.9,
         ),
     ),
-    Screen(
-        top=bar.Bar(
-            [
-                widget.GroupBox(
-		    font="Ubuntu Bold",
-                    fontsize=10,
-                    margin_y=3,
-                    margin_x=1,
-                    padding_y=5,
-                    padding_x=1,
-                    borderwidth=3,
-                    active="#eff1f5",
-                    inactive="#65737e",
-                    rounded=False,
-                    highlight_color="#5294e2",
-                    highlight_method="line",
-		),
-                widget.Spacer(length=bar.STRETCH),
-                widget.Clock(
-		    font="Ubuntu Bold",
-		    padding=5,
-		    format='%a %I:%M %p',
-		    ),
-            ],
-            28,
-            opacity=0.9,
-        ),
-    )
 ]
 
 # Drag floating layouts.
