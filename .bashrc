@@ -39,11 +39,7 @@ alias v='vim'
 # Add Color
 alias grep='grep --color=auto'
 
-_GREEN=$(tput setaf 2)
-_BLUE=$(tput setaf 4)
-_RED=$(tput setaf 1)
-_RESET=$(tput sgr0)
-_BOLD=$(tput bold)
+PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$"
+pokemon-colorscripts -n squirtle
 
-PS1="${_GREEN}\h${_BLUE}@${_RED}\u${_RESET} \W ${_BOLD}\$  ${_RESET}"
-
+eval "$(thefuck --alias)"
