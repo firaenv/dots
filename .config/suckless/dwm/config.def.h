@@ -27,7 +27,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -60,11 +59,12 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-p", "Run: ", "-fn", dmenufont, "-nb", col_1, "-nf", col_3, "-sb", col_4, "-sf", col_3, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *gimpcmd[]  = { "gimp", NULL };
-static const char *filecmd[]  = { "pcmanfm", NULL };
+static const char *filecmd[]  = { "st", "-e", "nnn", NULL };
 static const char *webcmd[]   = { "qutebrowser", NULL };
 static const char *vlccmd[]   = { "vlc", NULL };
 static const char *obscmd[]   = { "obs", NULL };
 static const char *scrpcmd[]  = { "config-sel", NULL };
+static const char *mailcmd[]  = { "st", "-e", "aerc", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,6 +76,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_v,      spawn,          {.v = vlccmd } },
 	{ MODKEY,			XK_o,      spawn,          {.v = obscmd } },
 	{ MODKEY,			XK_s,      spawn,          {.v = scrpcmd } },
+	{ MODKEY,			XK_m,      spawn,          {.v = mailcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -87,7 +88,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,		        XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
