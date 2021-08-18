@@ -65,6 +65,7 @@ static const char *vlccmd[]   = { "vlc", NULL };
 static const char *obscmd[]   = { "obs", NULL };
 static const char *scrpcmd[]  = { "config-sel", NULL };
 static const char *mailcmd[]  = { "st", "-e", "aerc", NULL };
+static const char *cmuscmd[]  = { "st", "-e", "cmus", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -77,6 +78,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_o,      spawn,          {.v = obscmd } },
 	{ MODKEY,			XK_s,      spawn,          {.v = scrpcmd } },
 	{ MODKEY,			XK_m,      spawn,          {.v = mailcmd } },
+	{ MODKEY,			XK_c,      spawn,          {.v = cmuscmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
