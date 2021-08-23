@@ -1,13 +1,11 @@
-#
+# 
 # ________  ________  ________   _______       ___    ___ ________      
 #|\_____  \|\   __  \|\   ___  \|\  ___ \     |\  \  /  /|\   ____\     
 # \|___/  /\ \  \|\  \ \  \\ \  \ \   __/|    \ \  \/  / | \  \___|_    
 #     /  / /\ \   __  \ \  \\ \  \ \  \_|/__   \ \    / / \ \_____  \   
 #    /  /_/__\ \  \ \  \ \  \\ \  \ \  \_|\ \   \/  /  /   \|____|\  \  
 #   |\________\ \__\ \__\ \__\\ \__\ \_______\__/  / /       ____\_\  \ 
-#    \|_______|\|__|\|__|\|__| \|__|\|_______|\___/ /       |\_________\
-#                                            \|___|/        \|_________|
-#                                                                       
+#    \|_______|\|__|\|__|\|__| \|__|\|_______|\___/ /       |\_________\ #                                            \|___|/        \|_________| #                                                                       
 #                                                                       
 #  ________  ________  ________  ___  ___  ________  ________           
 # |\   __  \|\   __  \|\   ____\|\  \|\  \|\   __  \|\   ____\          
@@ -19,27 +17,32 @@
 #                        \|_________|                                   
 #                                                                       
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# If not running interactively, don't do anything 
+[[ $- != *i* ]] && return 
 
-stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term)
+stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term) 
 
-## ALIASES ##
+## ALIASES ## 
 
-# navigation
-alias ..='cd ..'
-alias ...='cd ../..'
+# navigation 
+alias ..='cd ..' 
+alias ...='cd ../..' 
 
-alias ls='lsd'
-alias p='doas pacman'
+alias ls='lsd' 
+alias p='doas pacman' 
 
-# vim
-alias v='vim'
+# vim 
+alias v='vim' 
 
 # Add Color
-alias grep='grep --color=auto'
+alias grep='grep --color=auto' 
 
-PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ "
+PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 
+
 pokemon-colorscripts -n squirtle | sed '1,2d'
 
 eval "$(thefuck --alias)"
+
+setKeyboardLight () {
+    dbus-send --system --type=method_call  --dest="org.freedesktop.UPower" "/org/freedesktop/UPower/KbdBacklight" "org.freedesktop.UPower.KbdBacklight.SetBrightness" int32:$1 
+}
