@@ -46,7 +46,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -75,7 +75,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("dmenu_run -p 'Run: '") },
 	{ MODKEY,                       XK_Return, spawn,          SHCMD("$TERMINAL") },
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("pcmanfm") },
-	{ MODKEY,                       XK_d,      spawn,          SHCMD("$BROWSER discord.com/app") },
+	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("obs") },
