@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/zaney/.gtkrc-2.0.mine"
-gtk-theme-name="Skeuos-Blue-Dark"
-gtk-icon-theme-name="Win10Sur-blue-dark"
+gtk-theme-name="Yaru-Purple-dark"
+gtk-icon-theme-name="Flatery-Dark"
 gtk-font-name="Monofur Nerd Font Mono 14"
 gtk-cursor-theme-name="cz-Hickson-Black"
 gtk-cursor-theme-size=0

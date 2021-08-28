@@ -39,7 +39,7 @@ alias grep='grep --color=auto'
 
 PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 
 
-pokemon-colorscripts -n squirtle | sed '1,2d'
+pokemon-colorscripts -n gastly | sed '1,2d'
 
 eval "$(thefuck --alias)"
 
