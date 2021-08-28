@@ -28,3 +28,4 @@ set t_Co=256			" Set if term supports 256 colors
 set number 			" Show line numbers
 set clipboard=unnamedplus	" Copy & Paste between vim and other programs
 syntax enable
+

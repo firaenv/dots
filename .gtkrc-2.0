@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/zaney/.gtkrc-2.0.mine"
-gtk-theme-name="BlueSky-Dark"
+gtk-theme-name="Skeuos-Blue-Dark"
 gtk-icon-theme-name="Win10Sur-blue-dark"
 gtk-font-name="Monofur Nerd Font Mono 14"
 gtk-cursor-theme-name="cz-Hickson-Black"
@@ -15,4 +15,4 @@ gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
+gtk-xft-hintstyle="hintmedium"

@@ -358,30 +358,30 @@ c.colors.tabs.pinned.selected.even.bg = '#cc9966'
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = '"DaddyTimeMono Nerd Font Mono"'
+c.fonts.default_family = "Monofur Nerd Font Mono"
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = '12pt'
+c.fonts.default_size = '14pt'
 
 # Font used in the completion widget.
 # Type: Font
-c.fonts.completion.entry = '12pt "SpaceMono Nerd Font Mono"'
+c.fonts.completion.entry = '14pt "Monofur Nerd Font Mono"'
 
 # Font used for the debugging console.
 # Type: Font
-c.fonts.debug_console = '12pt "SpaceMono Nerd Font Mono"'
+c.fonts.debug_console = '14pt "Monofur Nerd Font Mono"'
 
 # Font used for prompts.
 # Type: Font
-c.fonts.prompts = '12pt "SpaceMono Nerd Font Mono"'
+c.fonts.prompts = '14pt "Monofur Nerd Font Mono"'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = '12pt "SpaceMono Nerd Font Mono"'
+c.fonts.statusbar = '14pt "Monofur Nerd Font Mono"'
 
 # Bindings to use dmenu rather than qutebrowser's builtin search.
 #config.bind('o', 'spawn --userscript dmenu-open')

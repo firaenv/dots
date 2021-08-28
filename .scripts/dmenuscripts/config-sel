@@ -1,2 +1,8 @@
 #!/bin/sh
-st -e vim $HOME/.scripts/"$(for dir in $HOME/.scripts/*; do [ ! -d "${dir}" ] && echo ${dir#$HOME/.scripts/}; done | dmenu -p "Edit: " -fn "SpaceMono Nerd Font Mono:size=14:antialias=true:autohint=true" -nb "#102842" -nf "#cccccc" -sb "#2494f8" -sf "#cccccc")"
+dir="${HOME}"/.scripts
+Result=$(cd "${dir}"; find * -type f | dmenu)
+if [ -n "$Result" ]; then
+	alacritty -e ${SHELL} -c "sleep 0.2; vim ${dir}/'$Result'"
+fi
+
+
