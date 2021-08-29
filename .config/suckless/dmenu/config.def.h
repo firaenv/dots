@@ -7,14 +7,14 @@ static const char *fonts[] = {
 	"Monofur Nerd Font Mono:size=16:antialias=true:autohint=true"
 };
 static const char *prompt      = "Run: ";      /* -p  option; prompt to the left of input field */
-static const char fg[]  = "#452f38";
-static const char bg[]  = "#100B0D";
-static const char bg2[] = "#140E11";
-static const char fg2[] = "#B294BB";
+static const char fg[]  = "#D5D3C5";
+static const char bg[]  = "#1A252F";
+static const char bg2[] = "#27323D";
+static const char fg2[] = "#3ECF97";
 static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm]     = { fg,  bg,  bg },
-	[SchemeSel]      = { fg2, bg,  fg2 },
+	                  /* fg   bg */
+	[SchemeNorm]     = { fg,  bg, },
+	[SchemeSel]      = { fg2, bg, },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */

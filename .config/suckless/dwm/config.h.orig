@@ -15,18 +15,10 @@ static const char *fonts[] = {
 	"Material Icons:size=14:antialias=true:autohint=true"
 };
 
-static const char fg[]  = "#D5D3C5";
-static const char bg[]  = "#1A252F";
-static const char bg2[] = "#27323D";
-static const char fg2[] = "#3ECF97";
-/* bar opacity 
- * 0xff is no transparency.
- * 0xee adds wee bit of transparency.
- * 0xdd adds adds a bit more transparency.
- * Play with the value to get desired transparency.
- */
-static const unsigned int baralpha = 0xdd;
-static const unsigned int borderalpha = OPAQUE;
+static const char fg[]  = "#c2bfa0";
+static const char bg[]  = "#0e151f";
+static const char bg2[] = "#263240";
+static const char fg2[] = "#25e587";
 static const char *colors[][3] = {
 	/*                   fg   bg  border   */
 	[SchemeNorm]     = { fg,  bg,  bg },
@@ -37,12 +29,6 @@ static const char *colors[][3] = {
 	[SchemeInfoSel]  = { fg,  bg,  "#000000" }, // infobar middle  selected {text,background,not used but cannot be empty}
 	[SchemeInfoNorm] = { fg,  bg,  "#000000" }, // infobar middle  unselected {text,background,not used but cannot be empty}
 	[SchemeHid]      = { fg,  bg,  bg },
-};
-
-static const unsigned int alphas[][3]      = {
-	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
