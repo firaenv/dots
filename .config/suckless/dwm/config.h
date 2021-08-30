@@ -4,10 +4,10 @@
 #define BAR_HEIGHT "35"
 
 static const unsigned int borderpx = 3;        /* border pixel of windows */
-static const unsigned int gappx    = 8;        /* gaps between windows */
+static const unsigned int gappx    = 10;        /* gaps between windows */
 static const unsigned int snap     = 32;       /* snap pixel */
-static const int showbar           = 1;        /* 0 means no bar */
-static const int topbar            = 1;        /* 0 means bottom bar */
+static const int showbar           = 0;        /* 0 means no bar */
+static const int topbar            = 0;        /* 0 means bottom bar */
 static const int user_bh           = 35; /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 
 static const char *fonts[] = {
@@ -88,7 +88,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("dmenu_run -p 'Run: '") },
 	{ MODKEY,                       XK_Return, spawn,          SHCMD("$TERMINAL") },
-	{ MODKEY,                       XK_f,      spawn,          SHCMD("pcmanfm") },
+	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e nnn") },
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },

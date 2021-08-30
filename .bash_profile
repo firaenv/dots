@@ -13,3 +13,4 @@ export BROWSER="qutebrowser"
 export EDITOR="vim"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+

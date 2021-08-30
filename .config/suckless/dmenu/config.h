@@ -8,9 +8,8 @@ static const char *fonts[] = {
 };
 static const char *prompt      = "Run: ";      /* -p  option; prompt to the left of input field */
 static const char fg[]  = "#D5D3C5";
-static const char bg[]  = "#1A252F";
-static const char bg2[] = "#27323D";
 static const char fg2[] = "#3ECF97";
+static const char bg[]  = "#1A252F";
 static const char *colors[SchemeLast][2] = {
 	                  /* fg   bg */
 	[SchemeNorm]     = { fg,  bg, },
