@@ -387,6 +387,9 @@ c.fonts.statusbar = '14pt "Monofur Nerd Font Mono"'
 #config.bind('o', 'spawn --userscript dmenu-open')
 #config.bind('O', 'spawn --userscript dmenu-open --tab')
 
+c.auto_save.session = True
+c.url.start_pages = ["https://youtube.com"] 
+
 # Bindings for normal mode
 config.bind('M', 'hint links spawn mpv {hint-url}')
 config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
