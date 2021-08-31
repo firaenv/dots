@@ -89,6 +89,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("dmenu_run -p 'Run: '") },
 	{ MODKEY,                       XK_Return, spawn,          SHCMD("$TERMINAL") },
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e fff") },
+	{ MODKEY,                       XK_m,      spawn,          SHCMD("$TERMINAL -e cmus") },
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
