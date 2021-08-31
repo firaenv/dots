@@ -7,7 +7,7 @@ static const unsigned int borderpx = 3;        /* border pixel of windows */
 static const unsigned int gappx    = 10;        /* gaps between windows */
 static const unsigned int snap     = 32;       /* snap pixel */
 static const int showbar           = 0;        /* 0 means no bar */
-static const int topbar            = 0;        /* 0 means bottom bar */
+static const int topbar            = 1;        /* 0 means bottom bar */
 static const int user_bh           = 35; /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 
 static const char *fonts[] = {
@@ -88,13 +88,15 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("dmenu_run -p 'Run: '") },
 	{ MODKEY,                       XK_Return, spawn,          SHCMD("$TERMINAL") },
-	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e nnn") },
+	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e fff") },
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("obs") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("config-sel") },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_b,      spawn,	   SHCMD("batstatus") },
+	{ MODKEY,                       XK_t,      spawn,	   SHCMD("time_date") },
+	{ MODKEY|ControlMask,           XK_b,      togglebar,      {0} },
 
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = -1 } },
@@ -110,17 +112,15 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 
 	/* Audio */
-	{ MODKEY,                       XK_bracketright,   spawn,    SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%") },
-	{ MODKEY,                       XK_bracketleft,    spawn,    SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%") },
-	{ MODKEY|ControlMask,           XK_bracketright,   spawn,    SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +1%") },
-	{ MODKEY|ControlMask,           XK_bracketleft,    spawn,    SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -1%") },
+	{ MODKEY,                       XK_bracketright,   spawn,    SHCMD("volup") },
+	{ MODKEY,                       XK_bracketleft,    spawn,    SHCMD("voldown") },
 
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
