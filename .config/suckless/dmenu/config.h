@@ -7,9 +7,9 @@ static const char *fonts[] = {
 	"Monofur Nerd Font Mono:size=16:antialias=true:autohint=true"
 };
 static const char *prompt      = "Run: ";      /* -p  option; prompt to the left of input field */
-static const char fg[]  = "#D5D3C5";
-static const char fg2[] = "#3ECF97";
-static const char bg[]  = "#1A252F";
+static const char fg[]  = "#e9e3ed";
+static const char bg[]  = "#011e46";
+static const char fg2[] = "#f842ff";
 static const char *colors[SchemeLast][2] = {
 	                  /* fg   bg */
 	[SchemeNorm]     = { fg,  bg, },

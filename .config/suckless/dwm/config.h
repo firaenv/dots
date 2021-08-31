@@ -15,10 +15,10 @@ static const char *fonts[] = {
 	"Material Icons:size=14:antialias=true:autohint=true"
 };
 
-static const char fg[]  = "#D5D3C5";
-static const char bg[]  = "#1A252F";
-static const char bg2[] = "#27323D";
-static const char fg2[] = "#3ECF97";
+static const char fg[]  = "#e9e3ed";
+static const char bg[]  = "#011e46";
+static const char bg2[] = "#011e46";
+static const char fg2[] = "#f842ff";
 /* bar opacity 
  * 0xff is no transparency.
  * 0xee adds wee bit of transparency.
@@ -46,8 +46,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[]    = {"", "", "", "", ""};
-static const char *alttags[] = {"", "", "", "", ""};
+static const char *tags[]    = {"", "", "", ""};
+static const char *alttags[] = {"", "", "", ""};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -133,11 +133,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask,           XK_r,      quit,           {1} },  /* Restart DWM */
 };
