@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# For Quickly Checking Zaney's Sub Count
+SUBS=$(curl -L --silent https://www.youtube.com/watch?v=WVcxMncK7jM | grep -Eo '[0-9]+ subscriber' | head -n 1)s
+
+notify-send -t 2500 "$SUBS"
