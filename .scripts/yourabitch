@@ -1,9 +1,10 @@
 #!/bin/bash
 
 TIME=$(shuf -i 1800-10800 -n 1)s
+COW=$(find /usr/share/cows/ -iname "*.cow" | shuf -n 1 | awk -F / '{print $NF}')
 
 while :; do
-	VAR1=$(cat ~/.scripts/insults.txt | shuf -n 1 | cowsay -f sodomized)
-	notify-send -t 5000 "$VAR1"
+	VAR1=$(cat ~/.scripts/insults.txt | shuf -n 1 | cowsay -f $COW)
+	notify-send -t 7500 "$VAR1"
 	sleep $TIME
 done&
