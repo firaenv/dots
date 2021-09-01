@@ -38,7 +38,7 @@
     separator_color = frame
     startup_notification = false
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/qutebrowser -new-tab
+    browser = /usr/bin/qutebrowser
     icon_position = off
     icon_path = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
     frame_width = 3

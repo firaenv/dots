@@ -36,6 +36,4 @@ while true; do
 	fi
 
 	sleep 12s
-done &
-
-
+done

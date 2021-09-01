@@ -1,0 +1,39 @@
+#!/bin/bash
+
+DTLINK=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg | grep "watch?v=" | head -n 1)
+TFLLINK=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCfp-lNJy4QkIGnaEE6NtDSg | grep "watch?v=" | head -n 1)
+TLCLINK=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCylGUf9BvQooEFjgdNudoQg | grep "watch?v=" | head -n 1)
+TOGLINK=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UUCtMVHI3AJD4Qk4hcbZnI9ZQ | grep "watch?v=" | head -n 1)
+
+while :; do
+	DTNEWVID=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg | grep "watch?v=" | head -n 1)
+	TFLNEWVID=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCfp-lNJy4QkIGnaEE6NtDSg | grep "watch?v=" | head -n 1)
+	TLCNEWVID=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCylGUf9BvQooEFjgdNudoQg | grep "watch?v=" | head -n 1)
+	TOGNEWVID=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UUCtMVHI3AJD4Qk4hcbZnI9ZQ | grep "watch?v=" | head -n 1)
+	
+	if [ "$DTNEWVID" != "$DTLINK" ]
+	then
+		notify-send -t 6000 "DT Has A New Video ;D"
+		DTLINK=$DTNEWVID
+	fi
+	
+	if [ "$TFLNEWVID" != "$TFLLINK" ]
+	then
+		notify-send -t 6000 "TFL Has A New Video ;D"
+		TFLLINK=$TFLNEWVID
+	fi
+	
+	if [ "$TLCNEWVID" != "$TLCLINK" ]
+	then
+		notify-send -t 6000 "Matt Has A New Video ;D"
+		TLCLINK=$TLCNEWVID
+	fi
+	
+	if [ "$TOGNEWVID" != "$TOGLINK" ]
+	then
+		notify-send -t 6000 "Muda Has A New Video ;D"
+		TOGLINK=$TOGNEWVID
+	fi
+	
+	sleep 600s
+done

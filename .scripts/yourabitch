@@ -7,4 +7,4 @@ while :; do
 	VAR1=$(cat ~/.scripts/insults.txt | shuf -n 1 | cowsay -f $COW)
 	notify-send -t 7500 "$VAR1"
 	sleep $TIME
-done&
+done
