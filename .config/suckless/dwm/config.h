@@ -96,6 +96,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("obs") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("config-sel") },
 	{ MODKEY|ShiftMask,		XK_s,      spawn,          SHCMD("subcount") },
+	{ MODKEY,			XK_e,      spawn,          SHCMD("execscripts") },
 	{ MODKEY,                       XK_b,      spawn,	   SHCMD("batstatus") },
 	{ MODKEY,                       XK_t,      spawn,	   SHCMD("time_date") },
 	{ MODKEY|ControlMask,           XK_b,      togglebar,      {0} },

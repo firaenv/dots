@@ -1,0 +1,9 @@
+#!/bin/bash
+
+TIME=$(shuf -i 1800-10800 -n 1)s
+
+while :; do
+	VAR1=$(cat ~/.scripts/insults.txt | shuf -n 1 | cowsay -f sodomized)
+	notify-send -t 5000 "$VAR1"
+	sleep $TIME
+done&
