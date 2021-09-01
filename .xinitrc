@@ -1,3 +1,5 @@
+#!/bin/bash
+
 picom -CGb --experimental-backends &
 nitrogen --restore &
 xrdb -merge ~/.Xresources &
