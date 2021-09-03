@@ -14,6 +14,9 @@ import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+import XMonad.Layout.LayoutModifier
+import XMonad.Layout.Spacing
+
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
@@ -31,6 +34,9 @@ myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 myFileBrowser :: String
 myFileBrowser = myTerminal ++ " -e fff "    -- Sets fff as file browser
 
+myMusicPlayer :: String
+myMusicPlayer = myTerminal ++ " -e cmus "    -- Sets cmus as music player
+
 myBorderWidth :: Dimension
 myBorderWidth = 3           -- Sets border width for windows
 
@@ -39,6 +45,10 @@ myNormColor   = "#011e46"   -- Border color of normal windows
 
 myFocusColor :: String
 myFocusColor  = "#f842ff"   -- Border color of focused windows
+
+--Makes setting the spacingRaw simpler to write. The spacingRaw module adds a configurable amount of space around windows.
+mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
+mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -86,8 +96,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch Editor
     , ((modm .|. shiftMask, xK_e     ), spawn myEditor)
     
+    -- launch Music Player
+    , ((modm, 		    xK_p     ), spawn myMusicPlayer)
+    
     -- launch OBS
     , ((modm,		    xK_o     ), spawn "obs")
+    
+    -- launch Discord
+    , ((modm,		    xK_d     ), spawn "discord")
     
     -- launch Gimp
     , ((modm,		    xK_g     ), spawn "gimp")
@@ -106,6 +122,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     
     -- Launch Battery Indicator Script
     , ((modm,		    xK_b     ), spawn "batstatus")
+    
+    -- Launch Volume Up Script
+    , ((modm,		    xK_bracketright     ), spawn "volup")
+    
+    -- Launch Volume Down Script
+    , ((modm,		    xK_bracketleft      ), spawn "voldown")
     
     -- Show Dmenu Prompt For Opening Bookmarks in QuteBrowser
     , ((modm .|. shiftMask, xK_b     ), spawn "qbookmarks")
@@ -226,7 +248,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = mySpacing 8 $ tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio

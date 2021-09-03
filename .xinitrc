@@ -2,6 +2,7 @@
 
 picom -CGb --experimental-backends &
 nitrogen --restore &
+tlp start &
 xrdb -merge ~/.Xresources &
 xsetroot -cursor_name left_ptr &
 batteryindicator &

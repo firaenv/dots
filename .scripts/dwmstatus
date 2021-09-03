@@ -12,10 +12,10 @@ while true; do
          #CPU=$(top -bn1 | grep Cpu | awk '{print $2}')%
 
 	 # This Section Is For Determining Battery Status & Setting Icon
-	 if [ $STATUS = "Charging" ] || [ $STATUS = "Full" ]
+	 if [ "$STATUS" = "Charging" ] || [ "$STATUS" = "Full" ]
 	 then
 		BATTERY=""
-	 elif [ $CHARGE -gt 25 ]
+	 elif [ "$CHARGE" -gt 25 ]
 	 then
 		BATTERY=""
 	 else
@@ -23,10 +23,10 @@ while true; do
 	 fi
 	 
 	 # This Section Sets The Volume Icon
-	 if [ $VOL -gt 75 ]
+	 if [ "$VOL" -gt 75 ]
 	 then
 		VOLICON=""
-	 elif [ $VOL -gt 50 ]
+	 elif [ "$VOL" -gt 50 ]
 	 then
 		VOLICON=""
 	 else
