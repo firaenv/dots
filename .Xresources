@@ -1,0 +1,56 @@
+Xcursor.theme:Adwaita
+Xcursor.size:16
+
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+XTerm.vt100.faceName: Monofur Nerd Font Mono:size=16:antialias=true
+XTerm.vt100.font: 7x13
+xterm*saveLines: 2000
+
+! COLORS FOR SXIV
+Sxiv.foreground:   #DBD0DC
+Sxiv.background:   #030610
+Sxiv.font: Monofur Nerd Font Mono:style=Regular:size=16
+
+! special
+*.foreground:   #DBD0DC
+*.background:   #030610
+*.cursorColor:  #DBD0DC
+
+! black
+*.color0:       #010106
+*.color8:       #373b41
+
+! red
+*.color1:       #911B1C
+*.color9:       #911B1C
+
+! green
+*.color2:       #458453
+*.color10:      #458453
+
+! yellow
+*.color3:       #AC4E29
+*.color11:      #CC9713
+
+! blue
+*.color4:       #6081B0
+*.color12:      #579AFE
+
+! magenta
+*.color5:       #850683
+*.color13:      #EC26EF
+
+! cyan
+*.color6:       #59938F
+*.color14:      #59938F
+
+! white
+*.color7:       #DBD0DC
+*.color15:      #DBD0DC
+
