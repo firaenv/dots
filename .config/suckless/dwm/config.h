@@ -2,16 +2,16 @@
 
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
-static const unsigned int gappx     = 12;        /* gaps between windows */
+static const unsigned int gappx     = 16;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Monofur Nerd Font Mono:size=16:antialias=true:autohint=true",
 					"JoyPixels:size=12:antialias=true:autohint=true",
 					"Material Icons:size=14:antialias=true:autohint=true" };
-static const char fg[]       = "#e9e3ed";
+static const char fg[]        = "#e9e3ed";
 static const char fg2[]       = "#f842ff";
-static const char bg[]       = "#011e46";
+static const char bg[]        = "#011e46";
 static const char bg2[]       = "#011e46";
 static const char *colors[][3]      = {
 	/*               fg	bg	border   */
@@ -50,7 +50,7 @@ static const Layout layouts[] = {
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} }, \
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -71,7 +71,6 @@ static const char *subscmd[]  = { "subcount", NULL };
 static const char *cnfscmd[]  = { "config-sel", NULL };
 static const char *cnfecmd[]  = { "execscripts", NULL };
 
-#include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,		XK_Return, spawn,          {.v = dmenucmd } },
@@ -88,45 +87,32 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,          {.v = subscmd } },
 	{ MODKEY,			XK_e,	   spawn,          {.v = cnfecmd } },
 	
-	{ MODKEY|ShiftMask,		XK_b,      togglebar,      {0} },
-	{ MODKEY,			XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,			XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
+	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY|ControlMask,		XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ControlMask,		XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,			XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,			XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ControlMask,		XK_Return, zoom,           {0} },
-	{ MODKEY,			XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,			XK_q,      killclient,     {0} },
-	{ MODKEY|ShiftMask,		XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ControlMask,		XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY|ShiftMask,		XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,			XK_space,  setlayout,      {0} },
-	{ MODKEY|ShiftMask,		XK_space,  togglefloating, {0} },
-	{ MODKEY|ShiftMask,		XK_f,      togglefullscr,  {0} },
-	{ MODKEY,			XK_0,      view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,		XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,			XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,			XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_comma,  tagmon,         {.i = -1 } },
-	
-	{ MODKEY,			XK_Down,   moveresize,     {.v = "0x 25y 0w 0h" } },
-	{ MODKEY,			XK_Up,     moveresize,     {.v = "0x -25y 0w 0h" } },
-	{ MODKEY,			XK_Right,  moveresize,     {.v = "25x 0y 0w 0h" } },
-	{ MODKEY,			XK_Left,   moveresize,     {.v = "-25x 0y 0w 0h" } },
-	{ MODKEY|ShiftMask,		XK_Down,   moveresize,     {.v = "0x 0y 0w 25h" } },
-	{ MODKEY|ShiftMask,		XK_Up,     moveresize,     {.v = "0x 0y 0w -25h" } },
-	{ MODKEY|ShiftMask,		XK_Right,  moveresize,     {.v = "0x 0y 25w 0h" } },
-	{ MODKEY|ShiftMask,		XK_Left,   moveresize,     {.v = "0x 0y -25w 0h" } },
-	
-	TAGKEYS(			XK_1,                      0)
-	TAGKEYS(			XK_2,                      1)
-	TAGKEYS(			XK_3,                      2)
-	TAGKEYS(			XK_4,                      3)
-	
-	{ MODKEY|ShiftMask,		XK_q,      quit,           {0} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	TAGKEYS(                        XK_1,                      0)
+	TAGKEYS(                        XK_2,                      1)
+	TAGKEYS(                        XK_3,                      2)
+	TAGKEYS(                        XK_4,                      3)
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */

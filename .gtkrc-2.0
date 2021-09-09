@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/zaney/.gtkrc-2.0.mine"
-gtk-theme-name="Orchis-purple-dark"
-gtk-icon-theme-name="McMuse-pink-dark"
+gtk-theme-name="Dracula"
+gtk-icon-theme-name="McMuse-purple-dark"
 gtk-font-name="Monofur Nerd Font Mono 14"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
