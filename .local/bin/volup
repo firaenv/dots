@@ -2,6 +2,6 @@
 
 pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-VOL=$(pamixer --get-volume)
+VOL=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5; exit }')
 
 notify-send -t 925 "Volume: $VOL"

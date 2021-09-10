@@ -1,0 +1,8 @@
+#!/bin/bash
+
+chosen=$( ls $HOME/Pictures/Wallpapers/ | dmenu -l 10)
+
+# Exit if none chosen.
+[ -z "$chosen" ] && exit
+
+feh --no-fehbg --bg-scale "$HOME/Pictures/Wallpapers/$chosen"

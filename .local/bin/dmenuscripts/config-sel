@@ -1,5 +1,5 @@
 #!/bin/sh
-dir="${HOME}"/.scripts
+dir="${HOME}"/.local/bin
 Result=$(cd "${dir}"; find * -type f | dmenu)
 if [ -n "$Result" ]; then
 	alacritty -e ${SHELL} -c "sleep 0.2; vim ${dir}/'$Result'"

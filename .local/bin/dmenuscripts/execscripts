@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Exec scripts (MAKE SURE YOUR SCRIPTS ARE ADDED TO YOUR $PATH)
-dir="${HOME}"/.scripts
+dir="${HOME}"/.local/bin
 Result=$(cd "${dir}"; find * -type f | dmenu)
 if [ -n "$Result" ]; then
 	$Result

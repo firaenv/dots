@@ -70,6 +70,8 @@ static const char *timecmd[]  = { "time_date", NULL };
 static const char *subscmd[]  = { "subcount", NULL };
 static const char *cnfscmd[]  = { "config-sel", NULL };
 static const char *cnfecmd[]  = { "execscripts", NULL };
+static const char *emojcmd[]  = { "dmenuemoji", NULL };
+static const char *wallcmd[]  = { "wall-select", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -81,12 +83,17 @@ static Key keys[] = {
 	{ MODKEY,			XK_t,	   spawn,          {.v = timecmd } },
 	{ MODKEY,			XK_g,	   spawn,          {.v = gimpcmd } },
 	{ MODKEY,			XK_w,	   spawn,          {.v = qutecmd } },
+	{ MODKEY|ShiftMask,		XK_w,	   spawn,          {.v = wallcmd } },
 	{ MODKEY,			XK_d,	   spawn,          {.v = disccmd } },
 	{ MODKEY,			XK_o,	   spawn,          {.v = obscmd  } },
 	{ MODKEY,			XK_s,	   spawn,          {.v = cnfscmd } },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,          {.v = subscmd } },
 	{ MODKEY,			XK_e,	   spawn,          {.v = cnfecmd } },
-	
+	{ MODKEY|ShiftMask,		XK_e,	   spawn,          {.v = emojcmd } },
+
+	{ MODKEY,                       XK_bracketright,   spawn,    SHCMD("volup") },
+	{ MODKEY,                       XK_bracketleft,    spawn,    SHCMD("voldown") },
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

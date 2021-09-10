@@ -284,7 +284,7 @@ c.colors.downloads.error.bg = '#bf7979'
 
 # Font color for hints.
 # Type: QssColor
-c.colors.hints.fg = '#f4a45f'
+c.colors.hints.fg = '#000000'
 
 # Font color for the matched part of hints.
 # Type: QtColor
@@ -389,6 +389,8 @@ c.fonts.statusbar = '14pt "Monofur Nerd Font Mono"'
 
 c.auto_save.session = True
 c.url.start_pages = ["https://youtube.com"] 
+
+c.colors.webpage.preferred_color_scheme = "dark"
 
 # Bindings for normal mode
 config.bind('M', 'hint links spawn mpv {hint-url}')

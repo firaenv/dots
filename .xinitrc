@@ -1,12 +1,21 @@
 #!/bin/bash
 
-picom -CGb &
-nitrogen --restore &
-dunst &
 xrdb -merge ~/.Xresources &
 xsetroot -cursor_name left_ptr &
+
+### START COMPOSITOR ###
+picom -CGb &
+
+### START NOTIFICATIONS ###
+dunst &
+
+### SETTING WALLPAPER ###
+# nitrogen --restore &
+feh --no-fehbg --bg-scale $HOME/Pictures/Wallpapers/Retrowave\ Highway.jpg &
+
 ### FOR LAPTOPS UNCOMMENT ###
 # batteryindicator &
+
 yourabitch &
 YTnotif &
 
