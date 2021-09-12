@@ -1,6 +1,10 @@
 #!/bin/bash
 
-chosen=$( ls $HOME/Pictures/Wallpapers/ | dmenu -l 10)
+### FOR DMENU ###
+# chosen=$( ls $HOME/Pictures/Wallpapers/ | dmenu -l 10)
+
+### FOR ROFI ###
+chosen=$( ls $HOME/Pictures/Wallpapers/ | rofi -dmenu )
 
 # Exit if none chosen.
 [ -z "$chosen" ] && exit

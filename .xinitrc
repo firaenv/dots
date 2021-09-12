@@ -4,7 +4,7 @@ xrdb -merge ~/.Xresources &
 xsetroot -cursor_name left_ptr &
 
 ### START COMPOSITOR ###
-picom -CGb &
+picom -CGb --experimental-backends &
 
 ### START NOTIFICATIONS ###
 dunst &

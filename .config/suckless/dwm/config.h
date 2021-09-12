@@ -10,9 +10,9 @@ static const char *fonts[]          = { "Monofur Nerd Font Mono:size=16:antialia
 					"JoyPixels:size=12:antialias=true:autohint=true",
 					"Material Icons:size=14:antialias=true:autohint=true" };
 static const char fg[]        = "#e9e3ed";
-static const char fg2[]       = "#f842ff";
-static const char bg[]        = "#011e46";
-static const char bg2[]       = "#011e46";
+static const char fg2[]       = "#72DC56";
+static const char bg[]        = "#000000";
+static const char bg2[]       = "#000000";
 static const char *colors[][3]      = {
 	/*               fg	bg	border   */
 	[SchemeNorm] = { fg,	bg,	bg   },
@@ -58,6 +58,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
 static const char *gimpcmd[]  = { "gimp", NULL };
@@ -75,7 +76,7 @@ static const char *wallcmd[]  = { "wall-select", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,		XK_Return, spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,		XK_Return, spawn,          {.v = roficmd } },
 	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
 	
 	{ MODKEY,			XK_f,	   spawn,          {.v = filecmd } },

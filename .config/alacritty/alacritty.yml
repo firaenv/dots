@@ -139,7 +139,7 @@ font:
     family: Monofur Nerd Font Mono
     style: Bold Italic
 
-  size: 14
+  size: 18
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -803,7 +803,7 @@ colors:
   normal:
     black:   '#010106'
     red:     '#911B1C'
-    green:   '#458453'
+    green:   '#72DC56'
     yellow:  '#AC4E29'
     blue:    '#6081B0'
     magenta: '#850683'
@@ -813,7 +813,7 @@ colors:
   bright:
     black:   '#010106'
     red:     '#911B1C'
-    green:   '#458453'
+    green:   '#72DC56'
     yellow:  '#CC9713'
     blue:    '#579AFE'
     magenta: '#EC26EF'

@@ -6,7 +6,7 @@ TIME=$(shuf -i 1800-10800 -n 1)s
 VAR2="0"
 
 while :; do
-	VAR1=$(shuf -n 1 $SCRIPTDEPS/insults.txt | cowsay -f sodomized)
+	VAR1=$(shuf -n 1 $SCRIPTDIR/insults.txt | cowsay -f sodomized)
 	if [ "$VAR1" != "$VAR2" ]
 	then
 		notify-send -t 7500 "$VAR1"

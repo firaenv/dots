@@ -240,7 +240,7 @@ c.colors.completion.even.bg = '#000000'
 
 # Foreground color of completion widget category headers.
 # Type: QtColor
-c.colors.completion.category.fg = '#e628ba'
+c.colors.completion.category.fg = '#72DC56'
 
 # Background color of the completion widget category headers.
 # Type: QssColor
@@ -248,11 +248,11 @@ c.colors.completion.category.bg = '#000000'
 
 # Top border color of the completion widget category headers.
 # Type: QssColor
-c.colors.completion.category.border.top = '#e628ba'
+c.colors.completion.category.border.top = '#72DC56'
 
 # Bottom border color of the completion widget category headers.
 # Type: QssColor
-c.colors.completion.category.border.bottom = '#e628ba'
+c.colors.completion.category.border.bottom = '#72DC56'
 
 # Foreground color of the selected completion item.
 # Type: QtColor
