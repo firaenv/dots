@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Exec scripts (MAKE SURE YOUR SCRIPTS ARE ADDED TO YOUR $PATH)
 dir="${HOME}"/.local/bin

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ### FOR DMENU ###
 # chosen=$( ls $HOME/Pictures/Wallpapers/ | dmenu -l 10)

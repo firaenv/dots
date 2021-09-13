@@ -1,0 +1,88 @@
+/**
+ * User: qball
+ * Copyright: Dave Davenport
+ */
+* {
+  black:      #1F252A;
+  red:        #FF8080;
+  green:      #97D59B;
+  yellow:     #f8c456;
+  blue:       #80D1FF;
+  mangenta:   #C780FF;
+  cyan:       #80FFE4;
+  emphasis:   #50536b;
+  text:       #D5D5D5;
+  text-alt:   #000000;
+
+  background-color: #000000;
+
+  font: "Monofur Nerd Font Mono 16";
+  text-color: @text;
+}
+window {
+    height:   100%;
+    width: 30em;
+    location: west;
+    anchor:   west;
+    border:  0px 2px 0px 0px;
+}
+
+mode-switcher {
+    border: 2px 0px 0px 0px;
+    background-color: #000000;
+    padding: 4px;
+}
+button selected {
+    border-color: @green;
+    text-color: @green;
+}
+inputbar {
+    background-color: @black;
+    text-color: @green;
+    padding: 4px;
+    border: 0px 0px 2px 0px;
+}
+mainbox {
+    expand: true;
+    background-color: #1c1c1cee;
+    spacing: 1em;
+}
+listview {
+    padding: 0em 0.4em 0em 1em;
+    dynamic: false;
+    lines: 0;
+}
+element selected  normal {
+    background-color: @green;
+    text-color: @text-alt;
+}
+element normal active {
+    text-color: @blue;
+}
+element normal urgent {
+    text-color: @red;
+}
+element alternate normal {
+}
+element alternate active {
+    text-color: @blue;
+}
+element alternate urgent {
+    text-color: @red;
+}
+element selected active {
+    background-color: @blue;
+    text-color: @emphasis;
+}
+element selected urgent {
+    background-color: @red;
+    text-color: @emphasis;
+}
+
+error-message {
+    expand: true;
+    background-color: red;
+    border-color: darkred;
+    border: 2px;
+    padding: 1em;
+}

@@ -9,7 +9,7 @@ export PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export TERMINAL="alacritty"
+export TERMINAL="xterm"
 export BROWSER="qutebrowser"
 export EDITOR="vim"
 
