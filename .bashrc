@@ -29,11 +29,8 @@ stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term)
 alias ..='cd ..' 
 alias ...='cd ../..' 
 
-alias ls='lsd' 
-alias p='doas pacman' 
-
-# vim 
-alias v='vim' 
+# alias ls='lsd' 
+# alias p='doas pacman' 
 
 # Add Color
 alias grep='grep --color=auto' 
@@ -42,9 +39,4 @@ PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ "
 
 pokemon-colorscripts -n ditto | sed '1,3d'
 
-eval "$(thefuck --alias)"
-
-setKeyboardLight () {
-    dbus-send --system --type=method_call  --dest="org.freedesktop.UPower" "/org/freedesktop/UPower/KbdBacklight" "org.freedesktop.UPower.KbdBacklight.SetBrightness" int32:$1 
-}
-
+# eval "$(thefuck --alias)"

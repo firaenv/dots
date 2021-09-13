@@ -13,7 +13,5 @@ export TERMINAL="alacritty"
 export BROWSER="qutebrowser"
 export EDITOR="vim"
 
-setfont ter-132n
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

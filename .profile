@@ -4,7 +4,6 @@ for dir in "${HOME}"/.local/bin/ "${HOME}"/.local/bin/*/ "${HOME}"/.local/share/
 done
 
 export SCRIPTDIR=$HOME/.local/share/scriptdeps
-export PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -13,3 +12,7 @@ export BROWSER="qutebrowser"
 export EDITOR="vim"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+
+### OPENBSD ###
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
+export PATH HOME TERM
