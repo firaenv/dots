@@ -29,7 +29,7 @@ stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term)
 alias ..='cd ..' 
 alias ...='cd ../..' 
 
-# alias ls='lsd' 
+alias ls='lsd' 
 # alias p='doas pacman' 
 
 # Add Color
@@ -39,4 +39,4 @@ PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ "
 
 pokemon-colorscripts -n ditto | sed '1,3d'
 
-# eval "$(thefuck --alias)"
+eval "$(thefuck --alias)"
