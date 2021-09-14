@@ -2,13 +2,13 @@
 dir="${HOME}"/.local/bin
 
 ### FOR DMENU ###
-# Result=$(cd "${dir}"; find * -type f | dmenu)
+Result=$(cd "${dir}"; find * -type f | dmenu)
 
 ### FOR ROFI ###
-Result=$(cd "${dir}"; find * -type f | rofi -dmenu)
+# Result=$(cd "${dir}"; find * -type f | rofi -dmenu)
 
 if [ -n "$Result" ]; then
-	xterm -e ${SHELL} -c "vim ${dir}/'$Result'"
+	$TERMINAL -e ${SHELL} -c "vim ${dir}/'$Result'"
 fi
 
 

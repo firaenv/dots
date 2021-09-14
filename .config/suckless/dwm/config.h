@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
-static const unsigned int gappx     = 16;        /* gaps between windows */
+static const unsigned int gappx     = 24;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -66,7 +66,7 @@ static const char *obscmd[]   = { "obs", NULL };
 static const char *disccmd[]  = { "discord", NULL };
 static const char *filecmd[]  = { "xterm", "-e", "fff", NULL };
 static const char *musicmd[]  = { "xterm", "-e", "cmus", NULL };
-static const char *qutecmd[]  = { "chrome", NULL };
+static const char *qutecmd[]  = { "qutebrowser", NULL };
 static const char *timecmd[]  = { "time_date", NULL };
 static const char *subscmd[]  = { "subcount", NULL };
 static const char *cnfscmd[]  = { "config-sel", NULL };
@@ -76,7 +76,7 @@ static const char *wallcmd[]  = { "wall-select", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,		XK_Return, spawn,          {.v = roficmd } },
+	{ MODKEY|ShiftMask,		XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
 	
 	{ MODKEY,			XK_f,	   spawn,          {.v = filecmd } },

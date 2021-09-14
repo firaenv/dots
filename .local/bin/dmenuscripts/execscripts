@@ -4,10 +4,10 @@
 dir="${HOME}"/.local/bin
 
 ### FOR DMENU ###
-# Result=$(cd "${dir}"; find * -type f | dmenu)
+Result=$(cd "${dir}"; find * -type f | dmenu)
 
 ### FOR ROFI ###
-Result=$(cd "${dir}"; find * -type f | rofi -dmenu)
+# Result=$(cd "${dir}"; find * -type f | rofi -dmenu)
 
 if [ -n "$Result" ]; then
 	$Result
