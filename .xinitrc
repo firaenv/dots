@@ -9,16 +9,19 @@ picom -b &
 ### START NOTIFICATIONS ###
 dunst &
 
-### SETTING WALLPAPER ###
-# nitrogen --restore &
-feh --no-fehbg --bg-scale $HOME/Pictures/Wallpapers/Retrowave\ Highway.jpg &
-
 ### FOR LAPTOPS UNCOMMENT ###
 # batteryindicator &
 
 yourabitch &
 YTnotif &
 
-while true ; do
-	dwm >/dev/null 2>&1
-done
+### SETTING WALLPAPER ###
+nitrogen --restore &
+# feh --no-fehbg --bg-scale $HOME/Pictures/Wallpapers/Purple\ Landscape\ Ultrawide.png &
+
+qtile start
+
+# while true ; do
+#	dwm >/dev/null 2>&1
+# done
+

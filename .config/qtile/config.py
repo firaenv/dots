@@ -1,36 +1,20 @@
-#
-# ________  ________  ________   _______       ___    ___ ________           ________  _________  ___  ___       _______       
-#|\_____  \|\   __  \|\   ___  \|\  ___ \     |\  \  /  /|\   ____\         |\   __  \|\___   ___\\  \|\  \     |\  ___ \      
-# \|___/  /\ \  \|\  \ \  \\ \  \ \   __/|    \ \  \/  / | \  \___|_        \ \  \|\  \|___ \  \_\ \  \ \  \    \ \   __/|     
-#     /  / /\ \   __  \ \  \\ \  \ \  \_|/__   \ \    / / \ \_____  \        \ \  \\\  \   \ \  \ \ \  \ \  \    \ \  \_|/__   
-#    /  /_/__\ \  \ \  \ \  \\ \  \ \  \_|\ \   \/  /  /   \|____|\  \        \ \  \\\  \   \ \  \ \ \  \ \  \____\ \  \_|\ \  
-#   |\________\ \__\ \__\ \__\\ \__\ \_______\__/  / /       ____\_\  \        \ \_____  \   \ \__\ \ \__\ \_______\ \_______\ 
-#    \|_______|\|__|\|__|\|__| \|__|\|_______|\___/ /       |\_________\        \|___| \__\   \|__|  \|__|\|_______|\|_______| 
-#                                            \|___|/        \|_________|              \|__|                                    
-#                                                                                                                              
-#                                                                                                                              
-# ________  ________  ________   ________ ___  ________  ___  ___  ________  ________  _________  ___  ________  ________      
-#|\   ____\|\   __  \|\   ___  \|\  _____\\  \|\   ____\|\  \|\  \|\   __  \|\   __  \|\___   ___\\  \|\   __  \|\   ___  \    
-#\ \  \___|\ \  \|\  \ \  \\ \  \ \  \__/\ \  \ \  \___|\ \  \\\  \ \  \|\  \ \  \|\  \|___ \  \_\ \  \ \  \|\  \ \  \\ \  \   
-# \ \  \    \ \  \\\  \ \  \\ \  \ \   __\\ \  \ \  \  __\ \  \\\  \ \   _  _\ \   __  \   \ \  \ \ \  \ \  \\\  \ \  \\ \  \  
-#  \ \  \____\ \  \\\  \ \  \\ \  \ \  \_| \ \  \ \  \|\  \ \  \\\  \ \  \\  \\ \  \ \  \   \ \  \ \ \  \ \  \\\  \ \  \\ \  \ 
-#   \ \_______\ \_______\ \__\\ \__\ \__\   \ \__\ \_______\ \_______\ \__\\ _\\ \__\ \__\   \ \__\ \ \__\ \_______\ \__\\ \__\
-#    \|_______|\|_______|\|__| \|__|\|__|    \|__|\|_______|\|_______|\|__|\|__|\|__|\|__|    \|__|  \|__|\|_______|\|__| \|__|
-#                                                                                                                              
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
 from typing import List  # noqa: F401
 
-from libqtile import qtile, bar, layout, widget, hook
-from libqtile.config import KeyChord, Click, Drag, Group, Key, Match, Screen
+from libqtile import bar, layout, widget
+from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.command import lazy
-import os
-import re
-import socket
-import subprocess
 
-mod = "mod4"
-terminal = "st"
+mod = "mod1"
+terminal = "alacritty"
+browser = "firefox"
 
 keys = [
     # Switch between windows
@@ -62,6 +46,21 @@ keys = [
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
+	Key([mod], "w", lazy.spawn(browser), desc="Launch le Browser"),
+	Key([mod], "g", lazy.spawn("gimp"), desc="Launch le GIMP"),
+	Key([mod], "o", lazy.spawn("obs"), desc="Launch le OBS"),
+	Key([mod], "d", lazy.spawn("discord"), desc="Launch le Discord"),
+	Key([mod], "f", lazy.spawn("alacritty -e fff"), desc="Launch le Fucking Fast File Manager"),
+	Key([mod], "p", lazy.spawn("alacritty -e cmus"), desc="Launch le Music Player"),
+	Key([mod], "e", lazy.spawn("dmenuemoji"), desc="Select Different Emoji's With dmenu"),
+	Key([mod, "shift"], "s", lazy.spawn("subcount"), desc="Show YouTube Subcount"),
+
+    # Toggle between split and unsplit sides of stack.
+    # Split = all windows displayed
+    # Unsplit = 1 window displayed, like Max layout, but still with
+    # multiple stack panes
+    Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
+        desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
@@ -70,59 +69,42 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod, "shift"], "Return", lazy.spawncmd(),
+    Key([mod, "shift"], "Return", lazy.spawn("dmenu_run"),
         desc="Spawn a command using a prompt widget"),
-
-    # My Application Shortcuts
-    Key([mod], "w", lazy.spawn("qutebrowser"), desc="Launch Web Browser"),
-    Key([mod], "d", lazy.spawn("discord"), desc="Launch Discord"),
-    Key([mod], "o", lazy.spawn("obs"), desc="Launch OBS Studio"),
-    Key([mod], "g", lazy.spawn("gimp"), desc="Launch GNU Image Manipulation Program"),
-    Key([mod], "v", lazy.spawn("vlc"), desc="Launch VLC Media Player"),
-    Key([mod, "shift"], "o", lazy.spawn("olive-editor"), desc="Launch Olive Video Editor"),
-    Key([mod], "f", lazy.spawn("pcmanfm"), desc="Launch File Browser"),
-
-    ### Switch focus of monitors
-    Key([mod], "period",
-    	lazy.next_screen(),
-        desc='Move focus to next monitor'
-        ),
-    Key([mod], "comma",
-    	lazy.prev_screen(),
-        desc='Move focus to prev monitor'
-        ),
-
 ]
 
+groups = [Group(i) for i in "123456789"]
 
-group_names = [("WRK", {'layout': 'monadtall'}),
-               ("WEB", {'layout': 'monadtall'}),
-               ("STM", {'layout': 'monadtall'}),
-               ("ITCH", {'layout': 'monadtall'}),
-               ("CHAT", {'layout': 'monadtall'}),
-               ("MUS", {'layout': 'monadtall'}),
-               ("VID", {'layout': 'monadtall'})]
+for i in groups:
+    keys.extend([
+        # mod1 + letter of group = switch to group
+        Key([mod], i.name, lazy.group[i.name].toscreen(),
+            desc="Switch to group {}".format(i.name)),
 
-groups = [Group(name, **kwargs) for name, kwargs in group_names]
+        # mod1 + shift + letter of group = switch to & move focused window to group
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
+            desc="Switch to & move focused window to group {}".format(i.name)),
+        # Or, use below if you prefer not to switch to that group.
+        # # mod1 + shift + letter of group = move focused window to group
+        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
+        #     desc="move focused window to group {}".format(i.name)),
+    ])
 
-for i, (name, kwargs) in enumerate(group_names, 1):
-    keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
-    keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
-
-layout_theme = {"border_width": 2,
-                "margin": 4,
-                "border_focus": "#2494f8",
-                "border_normal": "#1e141f"
-                }
+layout_theme = {"border_width": 4,
+                "margin": 8,
+                "border_focus": "E5E5E5",
+                "border_normal": "B2B2B2"
+		}
 
 layouts = [
-    # layout.Columns(border_focus_stack='#d75f5f'),
-    # layout.Max(),
+    # layout.Columns(border_focus_stack=['#d75f5f', '#8f3d3d'], border_width=4),
+    layout.MonadTall(**layout_theme),
+    layout.Max(**layout_theme),
+	layout.Floating(**layout_theme),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -132,10 +114,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='SpaceMono Nerd Font Mono',
-    fontsize=14,
-    padding=2,
-    background="#102842",
+    font='Monofur Nerd Font Mono',
+    fontsize=16,
+    padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -144,36 +125,19 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    font="SpaceMono Nerd Font Mono",
-                    fontsize=14,
-                    margin_y=4,
-                    margin_x=1,
-                    padding_y=2,
-                    padding_x=4,
-                    borderwidth=3,
-                    active="#eff1f5",
-                    inactive="#65737e",
-                    rounded=False,
-                    highlight_color="#5294e2",
-                    highlight_method="line",
-                    ),
-                widget.Prompt(
-		    background="#5294e2",
-		    font="Ubuntu Bold",
-		    foreground="#eff1f5",
-		    prompt="Run: ",
-		    padding=10,
-		    ),
-                widget.Spacer(length=bar.STRETCH),
-                widget.Clock(
-		    format='%a %I:%M %p',
-		    font="Ubuntu Bold",
-		    padding=5,
-		    ),
+					highlight_method="border",
+					),
+                widget.WindowName(),
+                widget.Chord(
+                    chords_colors={
+                        'launch': ("#36454F", "#D3D3D3"),
+                    },
+                    name_transform=lambda name: name.upper(),
+                ),
+                widget.Clock(format='%a %I:%M %p'),
                 widget.Systray(),
             ],
             24,
-            opacity=0.9,
         ),
     ),
 ]
@@ -189,7 +153,6 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
-main = None  # WARNING: this is deprecated and will be removed soon
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
@@ -200,12 +163,23 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='makebranch'),  # gitk
     Match(wm_class='maketag'),  # gitk
     Match(wm_class='ssh-askpass'),  # ssh-askpass
-    Match(wm_class='pcmanfm'), # file browser
-    Match(wm_class='steam'), # steam
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
-], **layout_theme)
+])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
+reconfigure_screens = True
 
+# If things like steam games want to auto-minimize themselves when losing
+# focus, should we respect this or not?
+auto_minimize = True
+
+# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
+# string besides java UI toolkits; you can see several discussions on the
+# mailing lists, GitHub issues, and other WM documentation that suggest setting
+# this string if your java app doesn't work correctly. We may as well just lie
+# and say that we're a working one by default.
+#
+# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
+# java that happens to be on java's whitelist.
 wmname = "LG3D"

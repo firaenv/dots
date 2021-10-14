@@ -28,5 +28,7 @@ set t_Co=256			" Set if term supports 256 colors
 set number 			" Show line numbers
 set clipboard=unnamedplus	" Copy & Paste between vim and other programs
 set nocompatible
+set shiftwidth=4                " One tab == four spaces. 
+set tabstop=4                   " One tab == four spaces.
 syntax enable
 

@@ -1,16 +1,16 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
-static const unsigned int gappx     = 24;        /* gaps between windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int gappx     = 18;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Monofur Nerd Font Mono:size=16:antialias=true:autohint=true",
 					"JoyPixels:size=12:antialias=true:autohint=true",
 					"Material Icons:size=14:antialias=true:autohint=true" };
-static const char fg[]        = "#e9e3ed";
-static const char fg2[]       = "#72DC56";
+static const char fg[]        = "#36454F";
+static const char fg2[]       = "#D3D3D3";
 static const char bg[]        = "#000000";
 static const char bg2[]       = "#000000";
 static const char *colors[][3]      = {
@@ -59,14 +59,14 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
-static const char *termcmd[]  = { "xterm", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 static const char *gimpcmd[]  = { "gimp", NULL };
 static const char *obscmd[]   = { "obs", NULL };
 static const char *disccmd[]  = { "discord", NULL };
-static const char *filecmd[]  = { "xterm", "-e", "fff", NULL };
-static const char *musicmd[]  = { "xterm", "-e", "cmus", NULL };
-static const char *qutecmd[]  = { "qutebrowser", NULL };
+static const char *filecmd[]  = { "alacritty", "-e", "fff", NULL };
+static const char *musicmd[]  = { "alacritty", "-e", "cmus", NULL };
+static const char *qutecmd[]  = { "firefox", NULL };
 static const char *timecmd[]  = { "time_date", NULL };
 static const char *subscmd[]  = { "subcount", NULL };
 static const char *cnfscmd[]  = { "config-sel", NULL };

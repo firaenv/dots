@@ -177,7 +177,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications.enabled', True, 'https://www.reddit.com')
+# config.set('content.notifications.enabled', True, 'https://www.reddit.com')
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -185,7 +185,7 @@ config.set('content.notifications.enabled', True, 'https://www.reddit.com')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications.enabled', True, 'https://www.youtube.com')
+# config.set('content.notifications.enabled', True, 'https://www.youtube.com')
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
@@ -390,7 +390,7 @@ c.fonts.statusbar = '14pt "Monofur Nerd Font Mono"'
 c.auto_save.session = True
 c.url.start_pages = ["https://youtube.com"] 
 
-c.colors.webpage.preferred_color_scheme = "dark"
+# c.colors.webpage.preferred_color_scheme = "dark"
 
 # Bindings for normal mode
 config.bind('M', 'hint links spawn mpv {hint-url}')
