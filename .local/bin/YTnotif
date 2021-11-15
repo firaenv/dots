@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DTLINK=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg | grep "watch?v=" | head -n 1)
 TFLLINK=$(curl --silent https://www.youtube.com/feeds/videos.xml?channel_id=UCfp-lNJy4QkIGnaEE6NtDSg | grep "watch?v=" | head -n 1)

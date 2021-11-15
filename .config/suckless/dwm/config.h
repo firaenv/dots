@@ -7,12 +7,12 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Monofur Nerd Font Mono:size=16:antialias=true:autohint=true",
-					"JoyPixels:size=12:antialias=true:autohint=true",
-					"Material Icons:size=14:antialias=true:autohint=true" };
-static const char fg[]        = "#36454F";
-static const char fg2[]       = "#D3D3D3";
-static const char bg[]        = "#000000";
-static const char bg2[]       = "#000000";
+										"JoyPixels:size=12:antialias=true:autohint=true",
+										"Material Icons:size=14:antialias=true:autohint=true" };
+static const char fg[]        = "#969896";
+static const char fg2[]       = "#3971ed";
+static const char bg[]        = "#1d1f21";
+static const char bg2[]       = "#1d1f21";
 static const char *colors[][3]      = {
 	/*               fg	bg	border   */
 	[SchemeNorm] = { fg,	bg,	bg   },
@@ -59,14 +59,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static const char *gimpcmd[]  = { "gimp", NULL };
-static const char *obscmd[]   = { "obs", NULL };
-static const char *disccmd[]  = { "discord", NULL };
-static const char *filecmd[]  = { "alacritty", "-e", "fff", NULL };
-static const char *musicmd[]  = { "alacritty", "-e", "cmus", NULL };
-static const char *qutecmd[]  = { "firefox", NULL };
+static const char *filecmd[]  = { "st", "-e", "fff", NULL };
+static const char *musicmd[]  = { "st", "-e", "cmus", NULL };
+static const char *qutecmd[]  = { "chrome", NULL };
 static const char *timecmd[]  = { "time_date", NULL };
 static const char *subscmd[]  = { "subcount", NULL };
 static const char *cnfscmd[]  = { "config-sel", NULL };
@@ -85,8 +83,6 @@ static Key keys[] = {
 	{ MODKEY,			XK_g,	   spawn,          {.v = gimpcmd } },
 	{ MODKEY,			XK_w,	   spawn,          {.v = qutecmd } },
 	{ MODKEY|ShiftMask,		XK_w,	   spawn,          {.v = wallcmd } },
-	{ MODKEY,			XK_d,	   spawn,          {.v = disccmd } },
-	{ MODKEY,			XK_o,	   spawn,          {.v = obscmd  } },
 	{ MODKEY,			XK_s,	   spawn,          {.v = cnfscmd } },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,          {.v = subscmd } },
 	{ MODKEY,			XK_e,	   spawn,          {.v = cnfecmd } },

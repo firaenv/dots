@@ -4,7 +4,7 @@ xrdb -merge ~/.Xresources &
 xsetroot -cursor_name left_ptr &
 
 ### START COMPOSITOR ###
-picom -b &
+picom -b --experimental-backends &
 
 ### START NOTIFICATIONS ###
 dunst &
@@ -12,16 +12,18 @@ dunst &
 ### FOR LAPTOPS UNCOMMENT ###
 # batteryindicator &
 
-yourabitch &
-YTnotif &
+sct 5000 &
+# yourabitch &
+# YTnotif &
 
 ### SETTING WALLPAPER ###
 nitrogen --restore &
 # feh --no-fehbg --bg-scale $HOME/Pictures/Wallpapers/Purple\ Landscape\ Ultrawide.png &
 
-qtile start
+exec dwm
+# qtile start
 
 # while true ; do
-#	dwm >/dev/null 2>&1
+#   	dwm >/dev/null 2>&1
 # done
 

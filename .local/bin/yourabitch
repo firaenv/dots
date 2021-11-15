@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 TIME=$(shuf -i 1800-10800 -n 1)s
 # COW=$(find /usr/share/cows/ -iname "*.cow" | shuf -n 1 | awk -F / '{print $NF}')

@@ -29,11 +29,11 @@ stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term)
 alias ..='cd ..' 
 alias ...='cd ../..' 
 
-alias ls='lsd' 
+# alias ls='lsd' 
 # alias p='doas pacman' 
 
 # Add Color
-alias grep='grep --color=auto' 
+alias egrep='grep --color=auto' 
 
 PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 
 
