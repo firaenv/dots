@@ -5,9 +5,3 @@ export PATH HOME TERM
 export SCRIPTDIR=$HOME/.local/share/scriptdeps
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-export TERMINAL="st"
-export BROWSER="chrome"
-export EDITOR="vim"
-
-[[ -f ~/.bashrc ]] && . ~/.bashrc
