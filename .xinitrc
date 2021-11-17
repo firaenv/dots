@@ -1,29 +1,23 @@
 #!/bin/bash
 
 xrdb -merge ~/.Xresources &
+setxkbmap -option ctrl:nocaps &
 xsetroot -cursor_name left_ptr &
 
 ### START COMPOSITOR ###
-picom -b --experimental-backends &
+picom -b &
 
 ### START NOTIFICATIONS ###
 dunst &
 
-### FOR LAPTOPS UNCOMMENT ###
-# batteryindicator &
-
+### SAVE YOUR EYES ###
 sct 5000 &
-# yourabitch &
-# YTnotif &
 
 ### SETTING WALLPAPER ###
 nitrogen --restore &
-# feh --no-fehbg --bg-scale $HOME/Pictures/Wallpapers/Purple\ Landscape\ Ultrawide.png &
+
+### DWM STATUS ###
+dwmstatus &
 
 exec dwm
-# qtile start
-
-# while true ; do
-#   	dwm >/dev/null 2>&1
-# done
 

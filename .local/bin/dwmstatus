@@ -3,37 +3,10 @@
 while true; do
 
          LOCALTIME=$(date '+%a %I:%M %P ')
-         VOL=$(pamixer --get-volume)
-         #DISKFREE=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $4'})
-         #DISKUSED=$(df -Ph | grep "/dev/nvme0n1p3" | awk {'print $3'})
-         #MEM=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
-         CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
-         STATUS=$(cat /sys/class/power_supply/BAT0/status)
-         #CPU=$(top -bn1 | grep Cpu | awk '{print $2}')%
+         VOL=$(sndioctl | egrep "output.l" | awk '{ print substr($1, 14); exit }')
+         BATTERY=$(apm | awk '{ print substr( $4, 0 ); exit }') 
 
-	 # This Section Is For Determining Battery Status & Setting Icon
-	 if [ "$STATUS" = "Charging" ] || [ "$STATUS" = "Full" ]
-	 then
-		BATTERY=""
-	 elif [ "$CHARGE" -gt 25 ]
-	 then
-		BATTERY=""
-	 else
-		BATTERY=""
-	 fi
-	 
-	 # This Section Sets The Volume Icon
-	 if [ "$VOL" -gt 75 ]
-	 then
-		VOLICON=""
-	 elif [ "$VOL" -gt 50 ]
-	 then
-		VOLICON=""
-	 else
-		VOLICON=""
-	 fi
+         xsetroot -name " BAT:$BATTERY VOL:$VOL | $LOCALTIME"
 
-         xsetroot -name " $BATTERY $VOLICON  $LOCALTIME"
-
-         sleep 1s
+         sleep 2
 done 
