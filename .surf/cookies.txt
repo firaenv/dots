@@ -39,11 +39,10 @@ ogs.google.com	FALSE	/	TRUE	1639720548	OTZ	6247076_80_80_104160_76_446820	None
 .google.com	TRUE	/	TRUE	1639721176	1P_JAR	2021-11-17-06	None
 .google.com	TRUE	/	FALSE	1668665211	SIDCC	AJi4QfGqjBSud_lTP1Lwdghq_StSjXY3D2Njq96ZuaAfakBdmOdK6TkHdXSmDiDP3dZfMdtDXg	None
 #HttpOnly_.google.com	TRUE	/	TRUE	1668665211	__Secure-3PSIDCC	AJi4QfFze_SmUqG9-x-lzI-c3Gpk7ilQrfhp8uyYzppACrQ2YWVXGa1LP-mK1QOMkDdwMC78_w	None
-.youtube.com	TRUE	/	TRUE	1700201352	PREF	f6=480&tz=America.Chicago	None
-.youtube.com	TRUE	/	FALSE	1668665393	SIDCC	AJi4QfHFzsQhxc5NXxwuqRToQzloQH6fK9qK52VN_qYaIdRx5vgJlqEdRFMaNd-iLtAgyq0HvA	None
-#HttpOnly_.youtube.com	TRUE	/	TRUE	1668665393	__Secure-3PSIDCC	AJi4QfHNhh5K39weZ9_T61u7f8fmEevvviVoTUtlv5szA5c0XFHClGyoDOAKX7p2-QN1aBdh	None
 #HttpOnly_gitlab.com	FALSE	/	TRUE	2268284725	experimentation_subject_id	eyJfcmFpbHMiOnsibWVzc2FnZSI6IklqUTROalUxTUdZMUxUSmhZekV0TkdVNFpTMDRZV0U0TFRVME9HRm1NelEyWWpnME5pST0iLCJleHAiOm51bGwsInB1ciI6ImNvb2tpZS5leHBlcmltZW50YXRpb25fc3ViamVjdF9pZCJ9fQ%3D%3D--7353bd82b8a806392787b691a0b2613fc708eb92	None
 gitlab.com	FALSE	/	FALSE	1952492637	sidebar_collapsed	false	None
 .gitlab.com	TRUE	/	TRUE	1700204698	_sp_id.6b85	61201471-611b-49f0-bbb6-f9763043dc96.1637132631.1.1637132698.1637132631.42613a9c-4176-4e39-bc53-5fc118798f1f	None
-.gitlab.com	TRUE	/	TRUE	1637134498	_sp_ses.6b85	*	None
 #HttpOnly_gitlab.com	FALSE	/	TRUE	1637140044	_gitlab_session	53aa085dce6fe70900505bd1b0b42086	None
+.youtube.com	TRUE	/	TRUE	1700206673	PREF	f6=480&tz=America.Chicago	None
+.youtube.com	TRUE	/	FALSE	1668670785	SIDCC	AJi4QfFsLKj_HAtTKeiyv78kgZpD9BJwwtDKGLMx-PKzzlvZnO9OkkQ6gRbOsDnLj7wlu9hmdg	None
+#HttpOnly_.youtube.com	TRUE	/	TRUE	1668670785	__Secure-3PSIDCC	AJi4QfE4zPulUVLnFi6y-mVf3WwJTdoVxEKEjF9C98rpXKhqFPHp2hQsarNJTAG2jPZizDQb	None
