@@ -5,8 +5,8 @@
 # VOL=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5; exit }')
 
 ### FOR OpenBSD ###
-sndioctl output.level=+0.1
-VOL=$(sndioctl | egrep output.level)
+pactl set-sink-volume @DEFAULT_SINK@ +5%
+VOL=$(pactl list sinks | tr ' ' '\n' | grep -m1 '%')
 
 
 notify-send -t 925 "Volume: $VOL"

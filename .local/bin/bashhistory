@@ -1,5 +1,0 @@
-#!/bin/sh
-
-HIST=$(cat ~/.bash_history | tail)
-
-notify-send -t 3000 "$HIST"

@@ -3,10 +3,10 @@
 while true; do
 
          LOCALTIME=$(date '+%a %I:%M %P ')
-         VOL=$(sndioctl | egrep "output.l" | awk '{ print substr($1, 14); exit }')
-         BATTERY=$(apm | awk '{ print substr( $4, 0 ); exit }') 
+		 VOL=$(pactl list sinks | tr ' ' '\n' | grep -m1 '%')
+         # BATTERY=$(apm | awk '{ print substr( $4, 0 ); exit }') 
 
-         xsetroot -name " BAT:$BATTERY VOL:$VOL | $LOCALTIME"
+         xsetroot -name " VOL:$VOL | $LOCALTIME"
 
-         sleep 2
+         sleep 6
 done 

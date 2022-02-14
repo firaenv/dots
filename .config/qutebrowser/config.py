@@ -228,131 +228,131 @@ c.url.searchengines = {'DEFAULT': 'https://search.brave.com/search?q={}', 'am': 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
 # Type: List of QtColor, or QtColor
-c.colors.completion.fg = '#ffffff'
+c.colors.completion.fg = '#ABB2BF'
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
-c.colors.completion.odd.bg = '#000000'
+c.colors.completion.odd.bg = '#282C34'
 
 # Background color of the completion widget for even rows.
 # Type: QssColor
-c.colors.completion.even.bg = '#000000'
+c.colors.completion.even.bg = '#282C34'
 
 # Foreground color of completion widget category headers.
 # Type: QtColor
-c.colors.completion.category.fg = '#72DC56'
+c.colors.completion.category.fg = '#C678DD'
 
 # Background color of the completion widget category headers.
 # Type: QssColor
-c.colors.completion.category.bg = '#000000'
+c.colors.completion.category.bg = '#282C34'
 
 # Top border color of the completion widget category headers.
 # Type: QssColor
-c.colors.completion.category.border.top = '#72DC56'
+c.colors.completion.category.border.top = '#C678DD'
 
 # Bottom border color of the completion widget category headers.
 # Type: QssColor
-c.colors.completion.category.border.bottom = '#72DC56'
+c.colors.completion.category.border.bottom = '#C678DD'
 
 # Foreground color of the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.fg = '#ffffff'
+c.colors.completion.item.selected.fg = '#ABB2BF'
 
 # Background color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.bg = '#151515'
+c.colors.completion.item.selected.bg = '#282C34'
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.match.fg = '#c5f779'
+c.colors.completion.item.selected.match.fg = '#98C379'
 
 # Foreground color of the matched text in the completion.
 # Type: QtColor
-c.colors.completion.match.fg = '#97b26b'
+c.colors.completion.match.fg = '#98C379'
 
 # Color of the scrollbar handle in the completion view.
 # Type: QssColor
-c.colors.completion.scrollbar.fg = '#000000'
+c.colors.completion.scrollbar.fg = '#282C34'
 
 # Background color for the download bar.
 # Type: QssColor
-c.colors.downloads.bar.bg = '#000000'
+c.colors.downloads.bar.bg = '#282C34'
 
 # Background color for downloads with errors.
 # Type: QtColor
-c.colors.downloads.error.bg = '#bf7979'
+c.colors.downloads.error.bg = '#E5C075'
 
 # Font color for hints.
 # Type: QssColor
-c.colors.hints.fg = '#000000'
+c.colors.hints.fg = '#ABB2BF'
 
 # Font color for the matched part of hints.
 # Type: QtColor
-c.colors.hints.match.fg = '#c5f779'
+c.colors.hints.match.fg = '#98C379'
 
 # Background color of an info message.
 # Type: QssColor
-c.colors.messages.info.bg = '#000000'
+c.colors.messages.info.bg = '#282C34'
 
 # Background color of the statusbar.
 # Type: QssColor
-c.colors.statusbar.normal.bg = '#000000'
+c.colors.statusbar.normal.bg = '#282C34'
 
 # Foreground color of the statusbar in insert mode.
 # Type: QssColor
-c.colors.statusbar.insert.fg = '#97b26b'
+c.colors.statusbar.insert.fg = '#98C379'
 
 # Background color of the statusbar in insert mode.
 # Type: QssColor
-c.colors.statusbar.insert.bg = '#000000'
+c.colors.statusbar.insert.bg = '#282C34'
 
 # Background color of the statusbar in passthrough mode.
 # Type: QssColor
-c.colors.statusbar.passthrough.bg = '#4a5463'
+c.colors.statusbar.passthrough.bg = '#56B6C2'
 
 # Background color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.bg = '#000000'
+c.colors.statusbar.command.bg = '#282C34'
 
 # Foreground color of the URL in the statusbar when there's a warning.
 # Type: QssColor
-c.colors.statusbar.url.warn.fg = '#bf7979'
+c.colors.statusbar.url.warn.fg = '#E5C075'
 
 # Background color of the tab bar.
 # Type: QssColor
-c.colors.tabs.bar.bg = '#000000'
+c.colors.tabs.bar.bg = '#282C34'
 
 # Background color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.bg = '#000000'
+c.colors.tabs.odd.bg = '#282C34'
 
 # Background color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.bg = '#000000'
+c.colors.tabs.even.bg = '#282C34'
 
 # Background color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.bg = '#151515'
+c.colors.tabs.selected.odd.bg = '#282C34'
 
 # Background color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.bg = '#151515'
+c.colors.tabs.selected.even.bg = '#282C34'
 
 # Background color of pinned unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.pinned.odd.bg = '#000000'
+c.colors.tabs.pinned.odd.bg = '#282C34'
 
 # Background color of pinned unselected even tabs.
 # Type: QtColor
-c.colors.tabs.pinned.even.bg = '#000000'
+c.colors.tabs.pinned.even.bg = '#282C34'
 
 # Background color of pinned selected odd tabs.
 # Type: QtColor
-c.colors.tabs.pinned.selected.odd.bg = '#151515'
+c.colors.tabs.pinned.selected.odd.bg = '#282C34'
 
 # Background color of pinned selected even tabs.
 # Type: QtColor
-c.colors.tabs.pinned.selected.even.bg = '#151515'
+c.colors.tabs.pinned.selected.even.bg = '#282C34'
 
 # Default font families to use. Whenever "default_family" is used in a
 # font setting, it's replaced with the fonts listed here. If set to an

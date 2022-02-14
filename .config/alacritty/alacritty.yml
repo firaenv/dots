@@ -321,7 +321,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
+background_opacity: 0.8
 
 #selection:
   # This string contains all characters that are used as separators for
@@ -793,30 +793,60 @@ cursor:
   # Print all received window events.
   #print_events: false
 
-# COLORS
 colors:
   # Default colors
   primary:
-    background: '#000000'
-    foreground: '#DBD0DC'
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
 
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #dim_foreground: '0x9a9a9a'
+    bright_foreground: '0xe6efff'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor. If these are unset,
+  # the cursor color will be the inverse of the cell color.
+  #cursor:
+  #  text: '0x000000'
+  #  cursor: '0xffffff'
+
+  # Normal colors
   normal:
-    black:   '#010106'
-    red:     '#911B1C'
-    green:   '#72DC56'
-    yellow:  '#AC4E29'
-    blue:    '#6081B0'
-    magenta: '#850683'
-    cyan:    '#59938F'
-    white:   '#DBD0DC'
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'
 
+  # Bright colors
   bright:
-    black:   '#010106'
-    red:     '#911B1C'
-    green:   '#72DC56'
-    yellow:  '#CC9713'
-    blue:    '#579AFE'
-    magenta: '#EC26EF'
-    cyan:    '#59938F'
-    white:   '#DBD0DC'
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xe6efff'
 
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  dim:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'

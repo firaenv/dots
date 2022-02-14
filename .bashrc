@@ -1,5 +1,3 @@
-source /usr/share/defaults/etc/profile
-
 PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 export PATH HOME TERM
 
@@ -13,19 +11,19 @@ alias ..='cd ..'
 alias ...='cd ../..' 
 alias ls='lsd'
 alias df='df -h'
-alias zaneyonline='ssh zaney@143.244.183.50'
+alias emerge='emerge -a'
 
 # Add Color
 alias egrep='grep --color=auto' 
 
 # PS1 Customization
-pokemon-colorscripts -n squirtle | sed '1,2d'
+# pokemon-colorscripts -n squirtle | sed '1,2d'
 PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 
 
 export SCRIPTDIR=$HOME/.local/share/scriptdeps
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export TERMINAL=/usr/local/bin/gnome-terminal
+export TERMINAL=/usr/local/bin/alacritty
 export BROWSER=/usr/local/bin/firefox
 export EDITOR=/usr/local/bin/vim
