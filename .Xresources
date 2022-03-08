@@ -20,39 +20,38 @@ Sxiv.background:   #030610
 Sxiv.font: Monofur Nerd Font Mono:style=Regular:size=16
 
 ! special
-*.foreground:   #DBD0DC
-*.background:   #030610
-*.cursorColor:  #DBD0DC
+*.foreground:   #eceff1
+*.background:   #263238
+*.cursorColor:  #eceff1
 
 ! black
-*.color0:       #010106
-*.color8:       #373b41
+*.color0:       #263238
+*.color8:       #37474f
 
 ! red
-*.color1:       #911B1C
-*.color9:       #911B1C
+*.color1:       #ff9800
+*.color9:       #ffa74d
 
 ! green
-*.color2:       #458453
-*.color10:      #458453
+*.color2:       #8bc34a
+*.color10:      #9ccc65
 
 ! yellow
-*.color3:       #AC4E29
-*.color11:      #CC9713
+*.color3:       #ffc107
+*.color11:      #ffa000
 
 ! blue
-*.color4:       #6081B0
-*.color12:      #579AFE
+*.color4:       #03a9f4
+*.color12:      #81d4fa
 
 ! magenta
-*.color5:       #850683
-*.color13:      #EC26EF
+*.color5:       #e91e63
+*.color13:      #ad1457
 
 ! cyan
-*.color6:       #59938F
-*.color14:      #59938F
+*.color6:       #009688
+*.color14:      #26a69a
 
 ! white
-*.color7:       #DBD0DC
-*.color15:      #DBD0DC
-
+*.color7:       #cfd8dc
+*.color15:      #eceff1
