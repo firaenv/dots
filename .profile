@@ -6,4 +6,5 @@ export PATH HOME TERM
 export SCRIPTDIR=$HOME/.local/share/scriptdeps
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export QT_QPA_PLATFORMTHEME=qt5ct
 
