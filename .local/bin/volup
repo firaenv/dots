@@ -1,12 +1,12 @@
 #!/bin/sh
 
 ### FOR LINUX ###
-# pactl set-sink-volume @DEFAULT_SINK@ +5%
-# VOL=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5; exit }')
+pactl set-sink-volume @DEFAULT_SINK@ +5%
+VOL=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5; exit }')
 
 ### FOR OpenBSD ###
-pactl set-sink-volume @DEFAULT_SINK@ +5%
-VOL=$(pactl list sinks | tr ' ' '\n' | grep -m1 '%')
+# pactl set-sink-volume @DEFAULT_SINK@ +5%
+# VOL=$(pactl list sinks | tr ' ' '\n' | grep -m1 '%')
 
 
 notify-send -t 925 "Volume: $VOL"

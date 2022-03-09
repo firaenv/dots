@@ -2,11 +2,11 @@
 
 while true; do
 
-         LOCALTIME=$(date '+%a %I:%M %P ')
+         # LOCALTIME=$(date '+%a %I:%M %P ')
 		 # VOL=$(pactl list sinks | tr ' ' '\n' | grep -m1 '%')
          # BATTERY=$(apm | awk '{ print substr( $4, 0 ); exit }') 
 
-         xsetroot -name " $LOCALTIME "
+         xsetroot -name " "
 
-         sleep 6
+         sleep 6000
 done 
