@@ -35,7 +35,7 @@ This repository is my personal dotfiles. Dotfiles are the files responsible for 
 - lineheight (set the thickness of dmenu)
 
 ### Picom (How Did You Get Rounded Corners!?!)
-I am using a custom version of picom made by jonaburg that achieves the blur, rounded corners, and animations. Find it here: [jonaburg-picom] (https://github.com/jonaburg/picom "Fancy Picom").
+I am using a custom version of picom made by jonaburg that achieves the blur, rounded corners, and animations. Find it here: https://github.com/jonaburg/picom
 
 # NOTICE
 If I am hosting your wallpaper and you would like credit for it or would like to have me remove it from this repository please reach out and I will comply. Thank you.

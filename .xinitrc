@@ -10,9 +10,6 @@ picom -b --experimental-backends &
 ### START NOTIFICATIONS ###
 dunst &
 
-### SAVE YOUR EYES ###
-# sct 5000 &
-
 ### SETTING WALLPAPER ###
 nitrogen --restore &
 
