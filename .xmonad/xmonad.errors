@@ -1,7 +1,0 @@
-
-xmonad.hs:85:14: warning: [-Wtabs]
-    Tab character found here, and in 27 further locations.
-    Please use spaces instead.
-   |
-85 |     [ ((modm,               xK_Return), spawn myTerminal)
-   |              ^^^
