@@ -1,8 +1,6 @@
-PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
-export PATH HOME TERM
-
 # If not running interactively, don't do anything 
 [[ $- != *i* ]] && return 
+
 
 stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term) 
 
@@ -17,7 +15,7 @@ alias emerge='emerge -a'
 alias egrep='grep --color=auto' 
 
 # PS1 Customization
-# pokemon-colorscripts -n squirtle | sed '1,2d'
+pokemon-colorscripts -n aipom | sed '1,2d'
 PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 
 
 export SCRIPTDIR=$HOME/.local/share/scriptdeps
@@ -27,6 +25,10 @@ export LANG=en_US.UTF-8
 export TERMINAL=/usr/local/bin/alacritty
 export BROWSER=/usr/local/bin/firefox
 export EDITOR=/usr/local/bin/vim
+
+# Add Needed Directories To PATH
+PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
+export PATH HOME TERM
 
 # Dracula Color Scheme For The TTY
 if [ "$TERM" = "linux" ]; then
