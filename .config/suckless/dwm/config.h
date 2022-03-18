@@ -76,7 +76,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_bracketleft,    spawn,  SHCMD("voldown") },
 	
 	/* External Scripts & Programs */
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("chromium") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("chrome") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("kitty -e amfora") },
 	{ MODKEY|Mod1Mask,              XK_k,      spawn,          SHCMD("kdenlive") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("dmenuemoji") },

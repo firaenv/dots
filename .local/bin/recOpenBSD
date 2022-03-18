@@ -5,12 +5,12 @@
 videoName=$(date +"%m_%d_%M_%Y")
 audioName=$(date +"%m_%d_%M_%Y").wav
 
-mkdir /home/zaney/Videos/$videoName &
+ffplay -f v4l2 -input_format mjpeg -video_size 1920x1080 -i /dev/video0 & 
 
 ffmpeg -y \
 	-f x11grab -thread_queue_size 32 \
-	-s 1920x1080 -r 30 -i $DISPLAY \
+	-s 2560x1440 -r 30 -i +1080,480 \
 	-f sndio -thread_queue_size 32 -i snd/0 \
     -codec:v libx264rgb -crf 0 -preset ultrafast \
     -codec:a pcm_s16le \
-	/home/zaney/Videos/$videoName/$videoName.mkv
+	/home/zaney/Videos/$videoName.mkv
