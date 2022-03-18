@@ -2,6 +2,7 @@
 
 # xsetroot -cursor_name left_ptr &
 xsetroot -name " " &
+xrdb -merge $HOME/.Xresources
 
 ### START COMPOSITOR ###
 picom -b --experimental-backends &
