@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-c", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -76,13 +76,13 @@ static Key keys[] = {
 	{ MODKEY,                       XK_bracketleft,    spawn,  SHCMD("voldown") },
 	
 	/* External Scripts & Programs */
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox") },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("alacritty -e amfora") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("chromium") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("kitty -e amfora") },
 	{ MODKEY|Mod1Mask,              XK_k,      spawn,          SHCMD("kdenlive") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("dmenuemoji") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
-	{ MODKEY,                       XK_f,      spawn,          SHCMD("alacritty -e ranger") },
-	{ MODKEY,                       XK_m,      spawn,          SHCMD("alacritty -e cmus") },
+	{ MODKEY,                       XK_f,      spawn,          SHCMD("kitty -e ranger") },
+	{ MODKEY,                       XK_m,      spawn,          SHCMD("kitty -e cmus") },
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("obs") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("time_date") },
