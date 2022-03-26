@@ -5,7 +5,7 @@
 BROWSER=/usr/local/bin/firefox
 EDITOR=/usr/local/bin/vim
 SCRIPTDIR=$HOME/.local/share/scriptdeps
-TERM=xterm
+TERM=st
 PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 export PATH HOME TERM EDITOR BROWSER SCRIPTDIR
 export ENV=$HOME/.kshrc

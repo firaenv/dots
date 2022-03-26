@@ -78,13 +78,13 @@ static Key keys[] = {
 	/* External Scripts & Programs */
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("chrome") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("st -e amfora") },
-	{ MODKEY|Mod1Mask,              XK_k,      spawn,          SHCMD("kdenlive") },
+	{ MODKEY|Mod1Mask,              XK_k,      spawn,          SHCMD("doas kdenlive") },
+	{ MODKEY,                       XK_s,      spawn,          SHCMD("scrot") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("dmenuemoji") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
-	{ MODKEY,                       XK_f,      spawn,          SHCMD("st -e ranger") },
+	{ MODKEY,                       XK_c,      spawn,          SHCMD("config-sel") },
+	{ MODKEY,                       XK_f,      spawn,          SHCMD("st -e fff") },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e cmus") },
-	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
-	{ MODKEY,                       XK_o,      spawn,          SHCMD("obs") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("time_date") },
 	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

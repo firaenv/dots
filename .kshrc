@@ -12,5 +12,7 @@ alias df='df -h'
 # Add Color
 alias egrep='grep --color=auto' 
 
-pokemon-colorscripts -n aipom | sed '1,2d'
-# PS1='$(print -n "`logname`@`hostname`:";if [[ "${PWD#$HOME}" != "$PWD" ]] then; print -n "~${PWD#$HOME}"; else; print -n "$PWD";fi;print "$ ")'
+pokemon-colorscripts -n togepi | sed '1,2d'
+PCNAME="bruh"
+PS1='\033[32m${USER}\033[35m@\033[34m${PCNAME} \033[33m${PWD} \033[36m\n\$\033[0m'
+export PS1

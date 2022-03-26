@@ -13,5 +13,5 @@ alias df='df -h'
 alias egrep='grep --color=auto' 
 
 # PS1 Customization
-pokemon-colorscripts -n aipom | sed '1,2d'
+pokemon-colorscripts -n togepi | sed '1,2d'
 PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 

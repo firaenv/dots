@@ -14,6 +14,6 @@ picom -b --experimental-backends &
 dunst &
 
 ### SETTING WALLPAPER ###
-feh --bg-fill ~/Pictures/Wallpapers/black5_unicat.png &
+feh --bg-fill ~/Pictures/Wallpapers/openbsd_catppuccin.png &
 
 exec dwm

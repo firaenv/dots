@@ -1,5 +1,5 @@
 #!/bin/sh
-dir="${HOME}"/.local/bin
+dir="${HOME}"/.config
 
 ### FOR DMENU ###
 Result=$(cd "${dir}"; find * -type f | dmenu)
@@ -8,7 +8,7 @@ Result=$(cd "${dir}"; find * -type f | dmenu)
 # Result=$(cd "${dir}"; find * -type f | rofi -dmenu)
 
 if [ -n "$Result" ]; then
-	$TERMINAL -e ${SHELL} -c "vim ${dir}/'$Result'"
+	$TERM -e ${SHELL} -c "vim ${dir}/'$Result'"
 fi
 
 
