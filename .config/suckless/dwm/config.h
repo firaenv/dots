@@ -15,15 +15,15 @@ static const int vertpad            = 8;       /* vertical padding of bar */
 static const int sidepad            = 8;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Monofur Nerd Font Mono:size=16:autohint=true:antialias=true" };
 static const char dmenufont[]       = { "Monofur Nerd Font Mono:size=16:autohint=true:antialias=true" };
-static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#6272a4";
-static const char col_gray3[]       = "#bd93f9";
-static const char col_gray4[]       = "#50fa7b";
-static const char col_cyan[]        = "#44475a";
+static const char col_gray1[]       = "#302D41";
+static const char col_gray2[]       = "#F5C2E7";
+static const char col_gray3[]       = "#F8BD96";
+static const char col_gray4[]       = "#C9CBFF";
+static const char col_gray5[]       = "#89DCEB";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_gray4  },
+	[SchemeSel]  = { col_gray4, col_gray1,  col_gray5  },
 };
 
 /* tagging */
@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-c", NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -77,12 +77,12 @@ static Key keys[] = {
 	
 	/* External Scripts & Programs */
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("chrome") },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("kitty -e amfora") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("st -e amfora") },
 	{ MODKEY|Mod1Mask,              XK_k,      spawn,          SHCMD("kdenlive") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("dmenuemoji") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
-	{ MODKEY,                       XK_f,      spawn,          SHCMD("kitty -e ranger") },
-	{ MODKEY,                       XK_m,      spawn,          SHCMD("kitty -e cmus") },
+	{ MODKEY,                       XK_f,      spawn,          SHCMD("st -e ranger") },
+	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e cmus") },
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("discord") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("obs") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("time_date") },
