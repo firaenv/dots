@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sndioctl input.level=1 &
+sndioctl output.level=0.8
