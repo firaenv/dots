@@ -12,8 +12,8 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#D9E0EE", "#1E1E2E" },
-	[SchemeSel] = { "#302D41", "#B5E8E0" },
+	[SchemeNorm] = { "#96CDFB", "#302D41" },
+	[SchemeSel] = { "#302D41", "#96CDFB" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */

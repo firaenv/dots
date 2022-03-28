@@ -5,7 +5,7 @@
 # Get user selection via dmenu from emoji file.
 
 ### FOR DMENU ###
-chosen=$(cut -d ';' -f1 $SCRIPTDIR/emoji | dmenu -c -l 10 | sed "s/ .*//")
+chosen=$(cut -d ';' -f 1 $SCRIPTDIR/emoji | dmenu -c -l 10 | sed "s/ .*//")
 
 ### FOR ROFI ###
 # chosen=$(cut -d ';' -f1 $SCRIPTDIR/emoji | rofi -dmenu | sed "s/ .*//")

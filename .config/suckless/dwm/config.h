@@ -15,15 +15,10 @@ static const int vertpad            = 8;       /* vertical padding of bar */
 static const int sidepad            = 8;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Monofur Nerd Font Mono:size=16:autohint=true:antialias=true" };
 static const char dmenufont[]       = { "Monofur Nerd Font Mono:size=16:autohint=true:antialias=true" };
-static const char col_gray1[]       = "#302D41";
-static const char col_gray2[]       = "#F5C2E7";
-static const char col_gray3[]       = "#F8BD96";
-static const char col_gray4[]       = "#C9CBFF";
-static const char col_gray5[]       = "#89DCEB";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_gray5  },
+	[SchemeNorm] = { "#DDB6F2", "#302D41", "#DDB6F2" },
+	[SchemeSel]  = { "#96CDFB", "#302D41", "#96CDFB" },
 };
 
 /* tagging */
@@ -78,11 +73,9 @@ static Key keys[] = {
 	/* External Scripts & Programs */
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("chrome") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("st -e amfora") },
-	{ MODKEY|Mod1Mask,              XK_k,      spawn,          SHCMD("doas kdenlive") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("scrot") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("dmenuemoji") },
 	{ MODKEY,                       XK_g,      spawn,          SHCMD("gimp") },
-	{ MODKEY,                       XK_c,      spawn,          SHCMD("config-sel") },
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("st -e fff") },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e cmus") },
 	{ MODKEY,                       XK_t,      spawn,          SHCMD("time_date") },

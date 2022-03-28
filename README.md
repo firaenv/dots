@@ -33,9 +33,5 @@ This repository is my personal dotfiles. Dotfiles are the files responsible for 
 - center (centers dmenu in the middle of the screen)
 - lineheight (set the thickness of dmenu)
 
-### Picom (How Did You Get Rounded Corners!?!)
-I am using a custom version of picom made by jonaburg that achieves the blur, rounded corners, and animations. Find it here: https://github.com/jonaburg/picom
-(OpenBSD users may want to use my fork of jonaburg's picom as it's specifically made with OpenBSD in mind).
-
 # NOTICE
 If I am hosting your wallpaper and you would like credit for it or would like to have me remove it from this repository please reach out and I will comply. Thank you.
