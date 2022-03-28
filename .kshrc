@@ -21,5 +21,5 @@ alias egrep='grep --color=auto'
 
 pokemon-colorscripts -n togepi | sed '1,2d'
 PCNAME="bruh"
-PS1='\033[32m${USER}\033[35m@\033[34m${PCNAME} \033[33m${PWD} \033[36m\$\033[0m'
+PS1='\033[32m${USER}\033[35m@\033[34m${PCNAME} \033[33m${PWD} \n\033[36m\$ \033[0m'
 export PS1
