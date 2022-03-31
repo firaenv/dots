@@ -12,7 +12,7 @@
 #----------------------------------------------------------------------------------
 
 [global]
-    font = Monofur Nerd Font Mono 16
+    font = Hermit 14
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -22,7 +22,7 @@
     show_age_threshold = -1
     word_wrap = yes
     ignore_newline = no
-    geometry = "500x40-30+30"
+	origin = top-center
     shrink = no
     transparency = 10
     idle_threshold = 70
@@ -43,7 +43,7 @@
     icon_path = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
     frame_width = 3
   
-frame_color = "#96CDFB"
+frame_color = "#1E1E2E"
 separator_color= frame
 
 [urgency_low]

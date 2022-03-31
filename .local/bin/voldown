@@ -2,6 +2,5 @@
 
 ### FOR OpenBSD ###
 sndioctl output.level=-0.1 &
-VOL=$(sndioctl | grep output.level) 
-
-notify-send -t 925 "Volume: $VOL"
+sleep 0.5 & # Wait for half a second
+notify-send -t 925 "$(sndioctl | grep output.level)"

@@ -39,6 +39,7 @@
 #ifdef XINERAMA
 #include <X11/extensions/Xinerama.h>
 #endif /* XINERAMA */
+#include <X11/extensions/shape.h>
 #include <X11/Xft/Xft.h>
 
 #include "drw.h"
@@ -253,6 +254,7 @@ static Monitor *wintomon(Window w);
 static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
+static void drawroundedcorners(Client *c);
 static void zoom(const Arg *arg);
 
 /* variables */
@@ -736,8 +738,8 @@ drawbar(Monitor *m)
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon) { /* status is only drawn on selected monitor */
 		drw_setscheme(drw, scheme[SchemeNorm]);
-		tw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
-		drw_text(drw, m->ww - tw - 2 * sp, 0, tw, bh, 0, stext, 0);
+		tw = TEXTW(stext);
+		drw_text(drw, m->ww - tw, 0, tw, bh, lrpad / 2, stext, 0);
 	}
 
 	for (c = m->clients; c; c = c->next) {
@@ -750,11 +752,11 @@ drawbar(Monitor *m)
 		w = TEXTW(tags[i]);
 		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
-		if (occ & 1 << i)
-			drw_rect(drw, x + boxw, 0, w - ( 2 * boxw + 1), boxw,
+		/*if (occ & 1 << i)
+			drw_rect(drw, x + boxw, 0, w - ( 2 * boxw ), boxw,
 			    m == selmon && selmon->sel && selmon->sel->tags & 1 << i,
 			    urg & 1 << i);
-
+*/
 		x += w;
 	}
 	w = blw = TEXTW(m->ltsymbol);
@@ -1132,6 +1134,9 @@ manage(Window w, XWindowAttributes *wa)
 		unfocus(selmon->sel, 0);
 	c->mon->sel = c;
 	arrange(c->mon);
+
+    drawroundedcorners(c);
+
 	XMapWindow(dpy, c->win);
 	focus(NULL);
 }
@@ -1348,6 +1353,55 @@ resizeclient(Client *c, int x, int y, int w, int h)
 	XSync(dpy, False);
 }
 
+void drawroundedcorners(Client *c) {
+    // if set to zero in config.h, do not attempt to round
+    if(CORNER_RADIUS < 0) return;
+
+    // NOTE: this is extremely hacky and surely could be optimized.
+    //       Any X wizards out there reading this, please pull request.
+    if (CORNER_RADIUS > 0 && c && !c->isfullscreen) {
+        Window win;
+        win = c->win;
+        if(!win) return;
+
+        XWindowAttributes win_attr;
+        if(!XGetWindowAttributes(dpy, win, &win_attr)) return;
+
+        // set in config.h:
+        int dia = 2 * CORNER_RADIUS;
+        int w = c->w;
+        int h = c->h;
+        if(w < dia || h < dia) return;
+
+        Pixmap mask;
+        mask = XCreatePixmap(dpy, win, w, h, 1);
+        if(!mask) return;
+
+        XGCValues xgcv;
+        GC shape_gc;
+        shape_gc = XCreateGC(dpy, mask, 0, &xgcv);
+
+        if(!shape_gc) {
+            XFreePixmap(dpy, mask);
+            free(shape_gc);
+            return;
+        }
+
+        XSetForeground(dpy, shape_gc, 0);
+        XFillRectangle(dpy, mask, shape_gc, 0, 0, w, h);
+        XSetForeground(dpy, shape_gc, 1);
+        XFillArc(dpy, mask, shape_gc, 0, 0, dia, dia, 0, 23040);
+        XFillArc(dpy, mask, shape_gc, w-dia-1, 0, dia, dia, 0, 23040);
+        XFillArc(dpy, mask, shape_gc, 0, h-dia-1, dia, dia, 0, 23040);
+        XFillArc(dpy, mask, shape_gc, w-dia-1, h-dia-1, dia, dia, 0, 23040);
+        XFillRectangle(dpy, mask, shape_gc, CORNER_RADIUS, 0, w-dia, h);
+        XFillRectangle(dpy, mask, shape_gc, 0, CORNER_RADIUS, w, h-dia);
+        XShapeCombineMask(dpy, win, ShapeBounding, 0, 0, mask, ShapeSet);
+        XFreePixmap(dpy, mask);
+        XFreeGC(dpy, shape_gc);
+    }
+}
+
 void
 resizemouse(const Arg *arg)
 {
@@ -1392,6 +1446,9 @@ resizemouse(const Arg *arg)
 			}
 			if (!selmon->lt[selmon->sellt]->arrange || c->isfloating)
 				resize(c, c->x, c->y, nw, nh, 1);
+
+            drawroundedcorners(c);
+
 			break;
 		}
 	} while (ev.type != ButtonRelease);
@@ -1403,6 +1460,7 @@ resizemouse(const Arg *arg)
 		selmon = m;
 		focus(NULL);
 	}
+    drawroundedcorners(c);
 }
 
 void
@@ -1747,8 +1805,8 @@ setup(void)
 	drw = drw_create(dpy, screen, root, sw, sh);
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
-	lrpad = drw->fonts->h;
-	bh = user_bh ? user_bh : drw->fonts->h + 2;
+	lrpad = drw->fonts->h + horizpadbar;
+	bh = drw->fonts->h + vertpadbar;
 	sp = sidepad;
 	vp = (topbar == 1) ? vertpad : - vertpad;
 	updategeom();

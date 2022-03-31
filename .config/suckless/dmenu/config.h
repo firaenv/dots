@@ -6,20 +6,20 @@ static int centered = 1;                    /* -c option; centers dmenu on scree
 static int min_width = 1000;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Monofur Nerd Font Mono:size=18:antialias=true:autohint=true",
+	"Hermit:size=14:antialias=true",
 	"Noto Color Emoji:size=18:antialias=true"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
-	/*     fg         bg       */
-	[SchemeNorm] = { "#96CDFB", "#302D41" },
-	[SchemeSel] = { "#302D41", "#96CDFB" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	/*     				fg         bg       */
+	[SchemeNorm] = { "#96CDFB", "#161320" },
+	[SchemeSel]  = { "#161320", "#96CDFB" },
+	[SchemeOut]  = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 10;
 /* -h option; minimum height of a menu line */
-static unsigned int lineheight = 28;
+static unsigned int lineheight = 22;
 static unsigned int min_lineheight = 8;
 
 /*
@@ -29,4 +29,4 @@ static unsigned int min_lineheight = 8;
 static const char worddelimiters[] = " ";
 
 /* Size of the window border */
-static const unsigned int border_width = 4;
+static const unsigned int border_width = 0;

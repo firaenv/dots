@@ -8,13 +8,13 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
-XTerm.vt100.faceName: Monofur Nerd Font Mono:size=18:antialias=true
+XTerm.vt100.faceName: Hermit:size=14:antialias=true
 XTerm.vt100.font: 7x13
 XTerm.vt100.saveLines: 4096
 XTerm.vt100.selectToClipboard: true
 XTerm.vt100.scrollBar: false
 
-*background: #1E1E2E
+*background: #161320
 *foreground: #D9E0EE
 
 ! Gray
