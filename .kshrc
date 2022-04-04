@@ -1,7 +1,8 @@
-BROWSER=/usr/local/bin/chromium
+BROWSER=/usr/local/bin/chrome
 EDITOR=/usr/local/bin/vim
 export EDITOR=vim
 export LANG=en_US.UTF-8
+export PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 
 # Aliases
 alias ..='cd ..' 

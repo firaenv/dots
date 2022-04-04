@@ -2,7 +2,7 @@
 #
 # sh/ksh initialization
 
-BROWSER=/usr/local/bin/firefox
+BROWSER=/usr/local/bin/chrome
 EDITOR=/usr/local/bin/vim
 SCRIPTDIR=$HOME/.local/share/scriptdeps
 TERM=st
