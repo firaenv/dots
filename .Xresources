@@ -1,5 +1,5 @@
-Xcursor.theme:Catppuccin-Lavender-Cursors
-Xcursor.size:32
+Xcursor.theme:Simp1e-Solarized-Dark
+Xcursor.size:24
 
 Xft.antialias: true
 Xft.hinting: true
@@ -14,37 +14,39 @@ XTerm.vt100.saveLines: 4096
 XTerm.vt100.selectToClipboard: true
 XTerm.vt100.scrollBar: false
 
-*background: #161320
-*foreground: #D9E0EE
+! special
+*foreground:   #93a1a1
+*background:   #002b36
+*cursorColor:  #93a1a1
 
-! Gray
-*color0: #6E6C7E
-*color8: #988BA2
+! black
+*color0:       #002b36
+*color8:       #657b83
 
-! Red
-*color1: #F28FAD
-*color9: #F28FAD
+! red
+*color1:       #dc322f
+*color9:       #dc322f
 
-! Green
-*color2: #ABE9B3
-*color10: #ABE9B3
+! green
+*color2:       #859900
+*color10:      #859900
 
-! Yellow
-*color3: #FAE3B0
-*color11:  #FAE3B0
+! yellow
+*color3:       #b58900
+*color11:      #b58900
 
-! Blue
-*color4: #96CDFB
-*color12: #96CDFB
+! blue
+*color4:       #268bd2
+*color12:      #268bd2
 
-! Maguve
-*color5: #DDB6F2
-*color13: #DDB6F2
+! magenta
+*color5:       #6c71c4
+*color13:      #6c71c4
 
-! Pink
-*color6: #F5C2E7
-*color14: #F5C2E7
+! cyan
+*color6:       #2aa198
+*color14:      #2aa198
 
-! Whites
-*color7: #C3BAC6
-*color15: #D9E0EE
+! white
+*color7:       #93a1a1
+*color15:      #fdf6e3
