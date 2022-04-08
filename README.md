@@ -9,6 +9,7 @@ This repository is my personal dotfiles. Dotfiles are the files responsible for 
 - st (terminal)
 - fff (file manager)
 - cmus (music player)
+- feh (Setting Wallpaper & Image Viewer)
 - mpv (video player)
 - discord (messaging - through browser)
 - chomium (web browsing)
