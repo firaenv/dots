@@ -5,10 +5,11 @@ This repository is my personal dotfiles. Dotfiles are the files responsible for 
 
 ## What I Use
 - dwm (tiling window manager)
-- dmenu (program launcher)
+- rofi (program launcher)
 - st (terminal)
 - fff (file manager)
 - cmus (music player)
+- mpv (video player)
 - discord (messaging - through browser)
 - chomium (web browsing)
 - kdenlive (video editing)
@@ -33,12 +34,3 @@ This repository is my personal dotfiles. Dotfiles are the files responsible for 
 - sticky
 - vanitygaps (adding the gap aesthetic)
 - warp (when changing monitors, or window focus - cursor follows)
-
-### DMENU Patches Used
-- allow-color-font (Allows rendering of color emojis)
-- border
-- center (centers dmenu in the middle of the screen)
-- lineheight (set the thickness of dmenu)
-
-# NOTICE
-If I am hosting your wallpaper and you would like credit for it or would like to have me remove it from this repository please reach out and I will comply. Thank you.

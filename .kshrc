@@ -1,6 +1,7 @@
 BROWSER=/usr/local/bin/chrome
 EDITOR=/usr/local/bin/vim
 export EDITOR=vim
+export XDG_DATA_DIRS=/usr/local/share
 export LANG=en_US.UTF-8
 export PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 

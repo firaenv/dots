@@ -40,8 +40,6 @@ call plug#begin()
 "   - Avoid using standard Vim directory names like 'plugin'
 
 " Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'scrooloose/nerdtree'
 
 Plug 'vim-airline/vim-airline'

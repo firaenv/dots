@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env ksh
 
 # This will start up your usb webcam, start a x11 screen grab, and record your mic
 #    -codec:a pcm_s16le \

@@ -1,0 +1,5 @@
+configuration {
+ font: "hermit 14";
+ }
+
+@theme "/usr/local/share/rofi/themes/solarized.rasi"
