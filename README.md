@@ -2,6 +2,7 @@
 1. [About My System](#About)
 2. [Program Directory](.local/bin)
 3. [Suckless](.config/suckless)
+4. [Wallpapers](Pictures/Wallpapers)
 4. [OpenBSD Specific](etc)
 
 # About My System <a name="About"></a>
