@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env ksh
 
 ### FOR OpenBSD ###
 sndioctl output.level=+0.1 &

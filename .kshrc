@@ -18,9 +18,6 @@ alias __D=`echo "\002"`     # left arrow = ^b = back a character
 alias __H=`echo "\001"`     # home = ^a = start of line
 alias __Y=`echo "\005"`     # end = ^e = end of line
 
-# Add Color
-alias egrep='grep --color=auto' 
-
 pokemon-colorscripts -n togepi | sed '1,2d'
 PCNAME="bruh"
 PS1='\033[32m${USER}\033[35m@\033[34m${PCNAME} \033[33m${PWD}\n \033[36m$ \033[0m'
