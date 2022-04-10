@@ -1,0 +1,44 @@
+# Theme Settings
+borderwidth 0
+color activeborder "#073642"
+color inactiveborder "#002B36"
+color groupborder "002B36"
+color ungroupborder "002B36"
+color menubg "#002B36"
+color menufg "#93A1A1"
+color font "#93A1A1"
+color selfont "002B36"
+
+# Set Font
+fontname "Hermit:size=14"
+
+# Keybindings
+# (firstly unbind the defaults - I am not quite a fan)
+# C = Control, M = ALT, S = Shift, 4 = Mod4 (Windows Key)
+unbind-key CMS-q
+unbind-key CM-f
+
+bind-key 4-Return		"xterm -geometry 125x40"
+bind-key 4S-Return		"rofi -show run"
+
+bind-key 4S-q			quit
+bind-key 4S-f			window-fullscreen
+bind-key 4-q			window-close
+bind-key 4-j			window-cycle
+bind-key 4-k			window-rcycle
+
+# Application Keybindings
+bind-key 4-w			chrome
+bind-key 4-g			gimp
+bind-key 4-s			scrot
+bind-key 4-m			maxvol
+bind-key 4-f			"xterm -e fff"
+bind-key 4-p			"xterm -geometry 90x35 -e cmus"
+
+# My Custom Script Keybindings
+bind-key 4-e			emoji-selector
+bind-key 4-t			time_date
+
+# Mouse Keybindings
+bind-mouse 4-1			window-move
+bind-mouse 4-3			window-resize

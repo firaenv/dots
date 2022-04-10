@@ -19,6 +19,6 @@ alias __H=`echo "\001"`     # home = ^a = start of line
 alias __Y=`echo "\005"`     # end = ^e = end of line
 
 pokemon-colorscripts -n togepi | sed '1,2d'
-PCNAME="bruh"
-PS1='\033[32m${USER}\033[35m@\033[34m${PCNAME} \033[33m${PWD}\n \033[36m$ \033[0m'
+HOSTN=$( hostname | cut -c 7- )
+PS1='\033[32m${USER}\033[35m@\033[34m${HOSTN} \033[33m${PWD}\n \033[36m$ \033[0m'
 export PS1

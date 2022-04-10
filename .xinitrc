@@ -10,4 +10,4 @@ dunst &
 ### SETTING WALLPAPER ###
 feh --bg-fill ~/Pictures/Wallpapers/solarized_puffy.png &
 
-exec dwm
+exec cwm
