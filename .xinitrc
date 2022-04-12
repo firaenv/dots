@@ -1,5 +1,6 @@
 xsetroot -name " " &
 xrdb -load $HOME/.Xresources &
+maxvol &
 
 ### START COMPOSITOR ###
 picom --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
