@@ -11,7 +11,7 @@
 This repository is my personal dotfiles. Dotfiles are the files responsible for customization on your Unix(-like) system. This exists so that anyone can see how I have customized my system. The customization and configuration files on Unix(-like) are referred to are dotfiles, because typically they begin with a period.
 
 ## What I Use
-- cwm (tiling window manager)
+- cwm (window manager)
 - rofi (program launcher)
 - xterm (terminal)
 - fff (file manager)
