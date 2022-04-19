@@ -3,7 +3,7 @@
 2. [Program Directory](.local/bin)
 3. [Suckless](.config/suckless)
 4. [Wallpapers](Pictures/Wallpapers)
-4. [OpenBSD Specific](etc)
+4. [Xenodm Rice](etc/X11/xenodm)
 
 # About My System <a name="About"></a>
 ![](Pictures/demo.gif)
