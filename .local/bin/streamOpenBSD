@@ -1,7 +1,6 @@
 #!/usr/bin/env ksh
 
 # This script will capture your microphone & desktop, then stream them both to YouTube.
-# Add and play around with these to try to align - misaligned audio/video
 
 VBR="10000k"                                   			# Bitrate For Stream
 FPS="30"                                       			# FPS For Screen Recording
