@@ -1,13 +1,11 @@
 # Theme Settings
 borderwidth 0
-color activeborder "#073642"
-color inactiveborder "#002B36"
-color groupborder "002B36"
-color ungroupborder "002B36"
-color menubg "#002B36"
-color menufg "#93A1A1"
-color font "#93A1A1"
-color selfont "#002B36"
+color activeborder "#282a36"
+color inactiveborder "#282a36"
+color menubg "#282a36"
+color menufg "#44475a"
+color font "#f8f8f2"
+color selfont "#f8f8f2"
 
 # Set Font
 fontname "Hermit:size=14"
@@ -20,6 +18,7 @@ sticky yes
 # C = Control, M = ALT, S = Shift, 4 = Mod4 (Windows Key)
 unbind-key CMS-q
 unbind-key CM-f
+unbind-key M-Return
 
 bind-key 4-Return		"xterm -geometry 125x40"
 bind-key 4S-Return		"rofi -show run"
@@ -37,7 +36,7 @@ bind-key 4S-2			window-movetogroup-2
 bind-key 4S-3			window-movetogroup-3
 
 # Application Keybindings
-bind-key 4-w			chrome
+bind-key 4-w			qutebrowser
 bind-key 4-g			gimp
 bind-key 4-s			scrot
 bind-key 4-m			maxvol
@@ -46,12 +45,19 @@ bind-key 4-p			"xterm -geometry 90x35 -e cmus"
 
 # My Custom Script Keybindings
 bind-key 4-e			emoji-selector
+bind-key 4M-w			weather-get
 bind-key 4-t			time_date
+bind-key 4S-t			tempcheck
 
 # Mouse Keybindings
 bind-mouse 4-1			window-move
 bind-mouse 4-3			window-resize
 
 # Applications Menu
-command chomium chrome
+command Browser qutebrowser
 command GIMP gimp
+command 0AD 0ad
+command Xonotic xonotic-sdl
+command Red-Alert openra-ra
+command Dune2K openra-d2k
+command Tiberian-Dawn openra-cnc

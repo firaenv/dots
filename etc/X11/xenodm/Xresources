@@ -1,0 +1,26 @@
+! $OpenBSD: Xresources.in,v 1.3 2020/06/28 15:38:34 matthieu Exp $
+xlogin.Login.echoPasswd:	true
+xlogin*greeting:
+xlogin*namePrompt:
+xlogin*passwdPrompt: 
+xlogin*fail:			Who The Fuck Are You? 
+xlogin.Login.allowRootLogin:	false
+
+xlogin*greetFace:		Hermit-22:bold:italic:dpi=75
+xlogin*face:            	Hermit-16:dpi=75
+xlogin*promptFace:      	Hermit-16:bold:dpi=75
+xlogin*failFace:        	Hermit-16:bold:dpi=75
+xlogin*borderWidth:		0
+xlogin.Login.frameWidth:	0
+xlogin.Login.innerFramesWidth:	0
+xlogin.Login.sepWidth:		0
+xlogin*background:		#282a36
+xlogin*inpColor:		#282a36
+xlogin*failColor:		#ff5555
+xlogin.Login.width:		200
+xlogin.Login.height:		200
+xlogin.Login.y:			900
+
+! 'Login:' and 'Password:'
+*Foreground: #f8f8f2
+*Background: #282a36

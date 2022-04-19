@@ -1,0 +1,4 @@
+#!/bin/sh
+# $OpenBSD: Xsetup_0.in,v 1.1 2021/08/30 15:38:27 matthieu Exp $
+
+/usr/local/bin/feh --bg-fill /home/tyler/Pictures/Wallpapers/Import\ Rice\ Unixporn\ 1.png

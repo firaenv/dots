@@ -41,19 +41,11 @@ call plug#begin()
 
 " Use release branch (recommend)
 Plug 'scrooloose/nerdtree'
-
-Plug 'vim-airline/vim-airline'
-
-Plug 'vim-airline/vim-airline-themes'
-
-" Initialize plugin system
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
-let g:ycm_use_clangd = 0
-
-" Vim & Vim-Airline Theme Settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'base16_solarized'
+" Vim Theme Settings
+colorscheme dracula
 let NERDTreeHighlightCursorline=0
 
 " Keybindings
