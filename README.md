@@ -1,8 +1,7 @@
 # Table of Contents
 1. [About My System](#About)
-2. [Program Directory](.local/bin)
-3. [Suckless](.config/suckless)
-4. [Wallpapers](Pictures/Wallpapers)
+2. [Script Directory](.local/bin)
+3. [Wallpapers](Pictures/Wallpapers)
 4. [Xenodm Rice](etc/X11/xenodm)
 
 # About My System <a name="About"></a>
