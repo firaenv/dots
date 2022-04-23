@@ -15,5 +15,6 @@ settings:
     https://meet.jit.si: true
   content.media.video_capture:
     https://discord.com: true
+    https://meet.jit.si: true
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: true

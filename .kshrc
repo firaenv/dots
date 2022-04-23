@@ -9,6 +9,7 @@ export PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenusc
 alias ..='cd ..' 
 alias ...='cd ../..' 
 alias df='df -h'
+alias sensors='sysctl hw.sensors'
 set -o emacs
 alias __A=`echo "\020"`     # up arrow = ^p = back a command
 alias __B=`echo "\016"`     # down arrow = ^n = down a command

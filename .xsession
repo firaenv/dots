@@ -3,9 +3,10 @@ TERM=xterm
 EDITOR=/usr/local/bin/vim
 BROWSER=/usr/local/bin/qutebrowser
 SCRIPTDIR=$HOME/.local/share/scriptdeps
+QT_QPA_PLATFORMTHEME=qt5ct
 ENV=$HOME/.kshrc
 LANG=en_US.UTF-8
-export PATH TERM EDITOR BROWSER SCRIPTDIR ENV LANG
+export PATH TERM EDITOR BROWSER SCRIPTDIR ENV LANG QT_QPA_PLATFORMTHEME
 xset b off &
 xrdb -load $HOME/.Xresources &
 maxvol &

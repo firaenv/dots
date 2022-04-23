@@ -12,15 +12,14 @@ STREAM_KEY="..."										# Stream Key
 # If this command is not working make sure the resolution is something your
 # webcam is capable of, and try 'doas chown <username> /dev/video0' as your
 # user might not own the camera.
-# ffplay -f v4l2 -input_format mjpeg -video_size 1920x1080 -i /dev/video0 & 
+ffplay -use_wallclock_as_timestamps 1 -f v4l2 -input_format mjpeg -video_size 1920x1080 -i /dev/video0 & 
 
-ffmpeg -y \
-	-f x11grab -probesize 32M -thread_queue_size 2048 \
+ffmpeg -use_wallclock_as_timestamps 1 -y \
+	-f x11grab -probesize 32M -thread_queue_size 4096 \
 	-s 2560x1440 -r $FPS -i +0,0 \
-	-f sndio -thread_queue_size 2048 -i snd/0 \
-	-f sndio -thread_queue_size 2048 -i snd/0.mon \
-    -codec:v libx264 -pix_fmt yuv420p -g 30 -b:v $VBR -preset $QUAL \
-	-filter_complex amix=inputs=2:duration=longest \
+	-f sndio -thread_queue_size 4096 -i snd/0 \
+    -codec:v libx264 -pix_fmt yuv420p -g $FPS -b:v $VBR -preset $QUAL \
+	-use_wallclock_as_timestamps 1 -codec:a aac \
 	-f flv $YOUTUBE_URL/$STREAM_KEY
 
 # To record microphone & desktop audio see here for how to set up monitoring
