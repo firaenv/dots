@@ -36,7 +36,7 @@ bind-key 4S-2			window-movetogroup-2
 bind-key 4S-3			window-movetogroup-3
 
 # Application Keybindings
-bind-key 4-w			qutebrowser
+bind-key 4-w			chrome
 bind-key 4-g			gimp
 bind-key 4-s			scrot
 bind-key 4-m			maxvol
@@ -54,8 +54,9 @@ bind-mouse 4-1			window-move
 bind-mouse 4-3			window-resize
 
 # Applications Menu
-command Browser qutebrowser
+command Browser chrome
 command GIMP gimp
+command Kdenlive kdenlive
 command 0AD 0ad
 command Xonotic xonotic-sdl
 command Red-Alert openra-ra
