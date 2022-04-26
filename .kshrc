@@ -12,6 +12,7 @@ alias ...='cd ../..'
 alias df='df -h'
 alias ls='exa'
 alias sensors='sysctl hw.sensors'
+alias disks='sysctl hw.disknames'
 set -o emacs
 alias __A=`echo "\020"`     # up arrow = ^p = back a command
 alias __B=`echo "\016"`     # down arrow = ^n = down a command

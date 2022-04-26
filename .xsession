@@ -13,4 +13,5 @@ maxvol &
 picom --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
 dunst &
 feh --bg-fill ~/Pictures/Wallpapers/Protruding\ Squares.png &
+xrandr -r 120 &
 cwm

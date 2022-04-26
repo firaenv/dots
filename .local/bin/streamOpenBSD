@@ -2,29 +2,25 @@
 
 # This script will capture your microphone & desktop, then stream them both to YouTube.
 
-VBR="10000k"                                   			# Bitrate For Stream
+VBR="9500k"                                   			# Bitrate For Stream
 FPS="30"                                       			# FPS For Screen Recording
 QUAL="ultrafast"                               			# Preset Quality (DEFAULT="medium")
 YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"			# RTMP URL For YouTube
-STREAM_KEY="..."										# Stream Key
+STREAM_KEY=$( cat $HOME/.streamkey )					# Stream Key
 
 # Uncomment this to open up your webcam (Change the resolution as needed)
 # If this command is not working make sure the resolution is something your
 # webcam is capable of, and try 'doas chown <username> /dev/video0' as your
 # user might not own the camera.
-ffplay -use_wallclock_as_timestamps 1 -f v4l2 -input_format mjpeg -video_size 1920x1080 -i /dev/video0 & 
+ffplay -f v4l2 -input_format mjpeg -video_size 1920x1080 -i /dev/video0 & 
 
-ffmpeg -use_wallclock_as_timestamps 1 -y \
+ffmpeg -y \
 	-f x11grab -probesize 32M -thread_queue_size 4096 \
 	-s 2560x1440 -r $FPS -i +0,0 \
-	-f sndio -thread_queue_size 4096 -i snd/0 \
+	-f sndio -thread_queue_size 4096 -i snd/default \
     -codec:v libx264 -pix_fmt yuv420p -g $FPS -b:v $VBR -preset $QUAL \
-	-use_wallclock_as_timestamps 1 -codec:a aac \
+	-codec:a libmp3lame -b:a 160k -ar 48000 -strict -2 -af aresample=async=1 \
 	-f flv $YOUTUBE_URL/$STREAM_KEY
 
 # To record microphone & desktop audio see here for how to set up monitoring
 # stream: https://www.openbsd.org/faq/faq13.html#recordmon
-
-# If you want to just record your microphone, remove the line ending in
-# snd/0.mon, add the line below & remove the complex filter line.
-# -codec:a aac \
