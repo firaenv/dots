@@ -1,6 +1,7 @@
 export BROWSER=/usr/local/bin/chrome
 export EDITOR=/usr/local/bin/vi
 export XDG_DATA_DIRS=/usr/local/share
+export RUST_SRC_PATH=$HOME/.cache/rust-src/library
 export LANG=en_US.UTF-8
 export TERM=xterm
 export SCRIPTDIR=$HOME/.local/share/scriptdeps

@@ -1,7 +1,7 @@
 PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 TERM=xterm
 EDITOR=/usr/local/bin/vim
-BROWSER=/usr/local/bin/qutebrowser
+BROWSER=/usr/local/bin/chromium
 SCRIPTDIR=$HOME/.local/share/scriptdeps
 QT_QPA_PLATFORMTHEME=qt5ct
 ENV=$HOME/.kshrc

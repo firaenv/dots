@@ -12,7 +12,7 @@ STREAM_KEY=$( cat $HOME/.streamkey )					# Stream Key
 # If this command is not working make sure the resolution is something your
 # webcam is capable of, and try 'doas chown <username> /dev/video0' as your
 # user might not own the camera.
-ffplay -f v4l2 -input_format mjpeg -video_size 1920x1080 -i /dev/video0 & 
+ffplay -f v4l2 -input_format mjpeg -framerate $FPS -video_size 1920x1080 -i /dev/video0 & 
 
 ffmpeg -y \
 	-f x11grab -probesize 32M -thread_queue_size 4096 \

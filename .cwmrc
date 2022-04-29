@@ -16,14 +16,13 @@ sticky yes
 # Keybindings
 # (firstly unbind the defaults - I am not quite a fan)
 # C = Control, M = ALT, S = Shift, 4 = Mod4 (Windows Key)
-unbind-key CMS-q
-unbind-key CM-f
-unbind-key M-Return
+unbind-key all
 
 bind-key 4-Return		"xterm -geometry 125x40"
 bind-key 4S-Return		"rofi -show run"
 
 bind-key 4S-q			quit
+bind-key 4S-r			restart
 bind-key 4S-f			window-fullscreen
 bind-key 4-q			window-close
 bind-key 4-j			window-cycle
@@ -34,12 +33,15 @@ bind-key 4-3			group-only-3
 bind-key 4S-1			window-movetogroup-1
 bind-key 4S-2			window-movetogroup-2
 bind-key 4S-3			window-movetogroup-3
+bind-key 4-slash		menu-exec
 
 # Application Keybindings
 bind-key 4-w			chrome
 bind-key 4-g			gimp
 bind-key 4-s			scrot
 bind-key 4-m			maxvol
+bind-key 4-comma		voldown
+bind-key 4-period		volup
 bind-key 4-f			"xterm -e fff"
 bind-key 4-p			"xterm -geometry 90x35 -e cmus"
 
@@ -50,7 +52,11 @@ bind-key 4-t			time_date
 bind-key 4S-t			tempcheck
 
 # Mouse Keybindings
+unbind-mouse M-1
+unbind-mouse M-2
+unbind-mouse M-3
 bind-mouse 4-1			window-move
+bind-mouse 4-2			window-lower
 bind-mouse 4-3			window-resize
 
 # Applications Menu
