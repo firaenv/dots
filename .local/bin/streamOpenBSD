@@ -8,16 +8,10 @@ QUAL="ultrafast"                               			# Preset Quality (DEFAULT="med
 YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"			# RTMP URL For YouTube
 STREAM_KEY=$( cat $HOME/.streamkey )					# Stream Key
 
-# Uncomment this to open up your webcam (Change the resolution as needed)
-# If this command is not working make sure the resolution is something your
-# webcam is capable of, and try 'doas chown <username> /dev/video0' as your
-# user might not own the camera.
-ffplay -f v4l2 -input_format mjpeg -framerate $FPS -video_size 1920x1080 -i /dev/video0 & 
-
 ffmpeg -y \
 	-f x11grab -probesize 32M -thread_queue_size 4096 \
-	-s 2560x1440 -r $FPS -i +0,0 \
-	-f sndio -thread_queue_size 4096 -i snd/default \
+	-s 2560x1440 -r $FPS -i +0,801 \
+	-f sndio -thread_queue_size 4096 -i snd/2 \
     -codec:v libx264 -pix_fmt yuv420p -g $FPS -b:v $VBR -preset $QUAL \
 	-codec:a libmp3lame -b:a 160k -ar 48000 -strict -2 -af aresample=async=1 \
 	-f flv $YOUTUBE_URL/$STREAM_KEY

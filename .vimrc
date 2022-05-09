@@ -41,11 +41,9 @@ call plug#begin()
 
 " Use release branch (recommend)
 Plug 'scrooloose/nerdtree'
-Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Vim Theme Settings
-colorscheme dracula
 let NERDTreeHighlightCursorline=0
 
 " Keybindings
