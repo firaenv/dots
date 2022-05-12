@@ -18,9 +18,6 @@ sticky yes
 # C = Control, M = ALT, S = Shift, 4 = Mod4 (Windows Key)
 unbind-key all
 
-bind-key 4-Return		"alacritty"
-bind-key 4S-Return		"rofi -show run"
-
 bind-key 4S-q			quit
 bind-key 4S-r			restart
 bind-key 4S-f			window-fullscreen
@@ -35,22 +32,11 @@ bind-key 4S-2			window-movetogroup-2
 bind-key 4S-3			window-movetogroup-3
 
 # Application Keybindings
-bind-key 4-w			chrome
-bind-key 4-g			gimp
-bind-key 4-s			scrot
 bind-key 4-comma		voldown
 bind-key 4-period		volup
-bind-key 4-f			"alacritty -e fff"
-bind-key 4-m			"alacritty -e cmus"
 
 # My Custom Script Keybindings
 bind-key 4-slash		setwall
-bind-key 4-e			emoji-selector
-bind-key 4M-w			weather-get
-bind-key 4-t			time_date
-bind-key 4S-t			tempcheck
-bind-key 4-p			strtwebcam1
-bind-key 4S-p			strtwebcam2
 
 # Mouse Keybindings
 unbind-mouse M-1

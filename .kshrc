@@ -3,7 +3,6 @@ alias ..='cd ..'
 alias ...='cd ../..' 
 alias df='df -h'
 alias ls='exa'
-alias vim='nvim'
 alias sensors='sysctl hw.sensors'
 alias disks='sysctl hw.disknames'
 set -o emacs

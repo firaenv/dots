@@ -10,16 +10,17 @@
 This repository is my personal dotfiles. Dotfiles are the files responsible for customization on your Unix(-like) system. This exists so that anyone can see how I have customized my system. The customization and configuration files on Unix(-like) are referred to are dotfiles, because typically they begin with a period.
 
 ## What I Use
-- cwm (window manager)
+- xenodm (login/display manager)
+- bspwm (window manager)
+- sxhkd (keybindings)
 - rofi (program launcher)
-- xterm (terminal)
+- alacritty (terminal)
 - fff (file manager)
 - cmus (music player)
-- feh (Setting Wallpaper & Image Viewer)
+- feh (set wallpaper & image viewing)
 - mpv (video player)
-- discord (messaging - through browser)
-- qutebrowser (web browsing)
+- chromium (web browsing)
 - kdenlive (video editing)
-- top (system monitoring)
+- htop (system monitoring)
 - dunst (notifications)
 - picom (compositing - *achieves the rounded corners, transparency, etc*)

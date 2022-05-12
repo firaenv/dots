@@ -18,5 +18,4 @@ xset b off &
 xrdb -merge $HOME/.Xresources &
 picom --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
 xrandr --output HDMI-A-0 --primary --mode 2560x1440 --rate 120 --pos 0x801 --rotate normal --output HDMI-A-1 --mode 2560x1080 --rate 60 --pos 2560x0 --rotate right &
-dunst &
-cwm
+bspwm
