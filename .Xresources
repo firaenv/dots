@@ -1,4 +1,4 @@
-Xcursor.theme:Dracula-cursors
+Xcursor.theme:Catppuccin-Blue-Cursors
 Xcursor.size:24
 
 Xft.antialias: true
@@ -8,7 +8,7 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
-XTerm.vt100.faceName: IBMPlexMono:size=14:antialias=true
+XTerm.vt100.faceName: Cascadia Code:size=14:antialias=true
 XTerm.vt100.font: 7x13
 XTerm.vt100.internalBorder: 2
 XTerm.vt100.saveLines: 4096

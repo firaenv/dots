@@ -1,8 +1,8 @@
 super + w
-    chrome
+    firefox-esr
 
 super + Return
-	alacritty
+	kitty
 
 super + shift + Return
 	rofi -show run
@@ -17,10 +17,10 @@ super + shift + p
 	strtwebcam2
 
 super + f
-	alacritty -e fff
+	kitty -e fff
 
 super + m
-	alacritty -e cmus
+	kitty -e cmus
 
 super + e
 	emoji-selector
@@ -31,11 +31,17 @@ super + shift + s
 super + g
 	gimp
 
+super + d
+	discord
+
+super + o
+	obs
+
 super + shift + r
 	bspc wm -r
 
 super + shift + q
-	pkill picom dunst feh sxhkd bspwm
+	pkill bspwm
 
 super + q
 	bspc node -c
@@ -45,14 +51,14 @@ super + i
 super + shift + i
     bspc node -R -90
 
-super + {shift + t,shift + s,shift + f}
-	bspc node -t {tiled,floating,fullscreen}
+super + {shift + t,shift + f}
+	bspc node -t {tiled,fullscreen}
 
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-super + {_,shift + }{1-5}
-	bspc {desktop -f,node -d} '^{1-5}'
+super + {_,shift + }{1-9,0}
+	bspc {desktop --focus,node --to-desktop} 'focused:^{1-9,10}'
 
 super + ctrl + {h,j,k,l}
 	bspc node -z {left -80 0,bottom 0 80,top 0 -80,right 80 0}

@@ -1,9 +1,9 @@
 PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
-TERM=/usr/local/bin/alacritty
-EDITOR=/usr/local/bin/vim
-BROWSER=/usr/local/bin/firefox
+TERM=xterm-kitty
+EDITOR=vim
+BROWSER=firefox-esr
 SCRIPTDIR=$HOME/.local/share/scriptdeps
-ENV=$HOME/.kshrc
+ENV=$HOME/.bashrc
 LANG=en_US.UTF-8
 QT_QPA_PLATFORMTHEME=qt5ct
 XDG_DATA_DIRS=/usr/local/share
