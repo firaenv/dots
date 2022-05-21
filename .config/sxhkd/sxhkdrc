@@ -1,6 +1,9 @@
 super + w
     firefox-esr
 
+super + shift + w
+	weather-get
+
 super + Return
 	kitty
 
@@ -24,6 +27,9 @@ super + m
 
 super + e
 	emoji-selector
+
+super + s
+	sys-stats
 
 super + shift + s
 	scrot

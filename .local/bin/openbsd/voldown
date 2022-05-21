@@ -1,0 +1,4 @@
+#!/usr/bin/env ksh
+
+### FOR OpenBSD ###
+notify-send -t 925 "$( sndioctl output.level=-0.1 | grep output.level )"
