@@ -18,7 +18,8 @@ bspc config active_border_color		"#8BE9FD"
 bspc config presel_feedback_color	"#50FA7B"
 
 dunst &
-feh --bg-fill ~/Pictures/Wallpapers/Japanese\ Garden.png &
+feh --bg-fill ~/Pictures/Wallpapers/FusionA1.png &
 sxhkd &
 xsetroot -cursor_name left_ptr
+xrdb -merge $HOME/.Xresources &
 xset r rate 200 50

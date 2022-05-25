@@ -44,7 +44,7 @@
     icon_path = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
     frame_width = 6
  
-frame_color = "#BD93F9"
+frame_color = "#282A36"
 separator_color= frame
 
 [urgency_low]

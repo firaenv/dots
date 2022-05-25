@@ -60,8 +60,13 @@ super + shift + i
 super + {shift + t,shift + f}
 	bspc node -t {tiled,fullscreen}
 
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+super + shift + {h,j,k,l}
+	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow \
+	    || bspc node -m "$dir" --follow
+
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
 
 super + {_,shift + }{1-9,0}
 	bspc {desktop --focus,node --to-desktop} 'focused:^{1-9,10}'
