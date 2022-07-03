@@ -12,7 +12,7 @@
 #----------------------------------------------------------------------------------
 
 [global]
-    font = Cascadia Code 14
+    font = Monofur Nerd Font Mono 14
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -43,19 +43,18 @@
     icon_position = off
     icon_path = /usr/share/icons/gnome/32x32/status/:/usr/share/icons/gnome/32x32/devices/
     frame_width = 6
- 
-frame_color = "#282A36"
-separator_color= frame
+	frame_color = "#8AADF4"
+	separator_color= frame
 
 [urgency_low]
-background = "#282A36"
-foreground = "#F8F8F2"
+background = "#24273A"
+foreground = "#CAD3F5"
 
 [urgency_normal]
-background = "#282A36"
-foreground = "#F8F8F2"
+background = "#24273A"
+foreground = "#CAD3F5"
 
 [urgency_critical]
-background = "#282A36"
-foreground = "#F8F8F2"
-frame_color = "#FF5555" 
+background = "#24273A"
+foreground = "#CAD3F5"
+frame_color = "#F5A97F" 

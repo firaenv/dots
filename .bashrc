@@ -6,7 +6,7 @@ stty -ixon # Disables ctrl-s and ctrl-q (Used To Pause Term)
 # Aliases
 alias ..='cd ..' 
 alias ...='cd ../..' 
-alias ls='exa'
+alias ls='lsd'
 alias df='df -h'
 
 # Add Color
