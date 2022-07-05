@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -29,6 +30,7 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "", "", "", "", "" };
 static const char *alttags[] = { "", "", "", "", "" };
+
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -68,6 +70,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
+static const char *mute[] = {"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
+static const char *volup[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
+static const char *voldown[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -109,6 +114,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_5,                      4)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} }, 
+	{ 0,        XF86XK_AudioMute,              spawn,          {.v = mute } },
+  { 0,        XF86XK_AudioLowerVolume,       spawn,          {.v = voldown } },
+  { 0,        XF86XK_AudioRaiseVolume,       spawn,          {.v = volup } },
 };
 
 /* button definitions */
