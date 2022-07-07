@@ -10,4 +10,5 @@ picom -b &
 dunst &
 xrdb -merge $HOME/.Xresources &
 xset r rate 200 50 &
+source ~/.profile &
 exec dwm
