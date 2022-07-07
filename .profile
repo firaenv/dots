@@ -1,7 +1,7 @@
 PATH=$HOME/bin:/root/.cargo/bin:$HOME/.local/bin:$HOME/.local/bin/dmenuscripts:$HOME/.cargo/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
-TERM=xterm-kitty
+TERM=xterm
 EDITOR=vim
-BROWSER=firefox-esr
+BROWSER=chrome
 SCRIPTDIR=$HOME/.local/share/scriptdeps
 ENV=$HOME/.bashrc
 LANG=en_US.UTF-8
