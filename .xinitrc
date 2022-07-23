@@ -6,7 +6,7 @@ QT_QPA_PLATFORMTHEME=qt5ct
 export PATH SCRIPTDIR QT_QPA_PLATFORMTHEME
 
 feh --bg-fill ~/Pictures/Wallpapers/FusionA1.png &
-picom -b &
+picom --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
 dunst &
 xrdb -merge $HOME/.Xresources &
 xset r rate 200 50 &
